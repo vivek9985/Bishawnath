@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Header from "./pages/home/header/Header";
+import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -17,7 +17,7 @@ const Layout = () => {
     duration: 1.5,
   });
   return (
-    <main className="bg-[#fffaf1] dark:bg-[#161616] transition-all duration-300">
+    <main className="max-w-[1400px] mx-auto bg-[#fffaf1] dark:bg-[#161616] transition-all duration-300">
       <Header />
       <Outlet />
       <Footer />

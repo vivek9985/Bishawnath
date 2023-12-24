@@ -1,57 +1,70 @@
+import { useEffect } from "react";
 import Tittle from "../Tittle/Tittle";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Skills = () => {
+  useEffect(() => {
+    Aos.init();
+  });
   return (
     <section className="w-10/12 mx-auto my-20">
       <Tittle text={"skills"}></Tittle>
-      <div className="mb-24 flex items-center justify-center">
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/HTML.svg"
-          />
-        </div>
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg"
-          />
-        </div>
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg"
-          />
-        </div>
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/JavaScript.svg"
-          />
-        </div>
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/React.svg"
-          />
-        </div>
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://github.com/tandpfun/skill-icons/raw/main/icons/Firebase-Dark.svg"
-          />
-        </div>
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://github.com/tandpfun/skill-icons/raw/main/icons/ExpressJS-Dark.svg"
-          />
-        </div>
-        <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-          <img
-            className="w-full h-full rounded-full p-0.5"
-            src="https://github.com/tandpfun/skill-icons/raw/main/icons/MongoDB.svg"
-          />
+
+      <div className="mb-20 overflow-hidden">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1100"
+          className="pb-4 flex items-center justify-center"
+        >
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/HTML.svg"
+            />
+          </div>
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg"
+            />
+          </div>
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg"
+            />
+          </div>
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/JavaScript.svg"
+            />
+          </div>
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/React.svg"
+            />
+          </div>
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://github.com/tandpfun/skill-icons/raw/main/icons/Firebase-Dark.svg"
+            />
+          </div>
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://github.com/tandpfun/skill-icons/raw/main/icons/ExpressJS-Dark.svg"
+            />
+          </div>
+          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
+            <img
+              className="w-full h-full rounded-full p-0.5"
+              src="https://github.com/tandpfun/skill-icons/raw/main/icons/MongoDB.svg"
+            />
+          </div>
         </div>
       </div>
 

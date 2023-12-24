@@ -1,7 +1,8 @@
 import Tittle from "../Tittle/Tittle";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { AiOutlineEye } from "react-icons/ai";
 import projectOneImageOne from "../../assets/project-one/one.png";
 import projectOneImageTwo from "../../assets/project-one/two.png";
 import projectOneImageThree from "../../assets/project-one/three.png";
@@ -60,7 +61,9 @@ const Projects = () => {
     <section className="w-10/12 mx-auto mt-40 pb-20">
       <div className="mx-auto flex justify-center text-center">
         <Tittle text={"Projects"}></Tittle>
-        <sup className="mt-3 ml-1 dhurjati font-bold text-[14px] text-gray-600 dark:text-gray-400">03</sup>
+        <sup className="mt-3 ml-1 dhurjati font-bold text-[14px] text-gray-600 dark:text-gray-400">
+          03
+        </sup>
       </div>
       <div className="mt-20">
         {/* project one */}
@@ -118,15 +121,15 @@ const Projects = () => {
               </p>
               <div className="flex items-center justify-start gap-3 my-5">
                 <a href="https://electric-pump.surge.sh/" target="_blank">
-                  <button className="flex items-center justify-center gap-2 px-3 py-1 bg-[#c9f31d] rounded-full font-medium">
-                    Live Link
-                    <FaLink className="text-sm"></FaLink>
+                  <button className="flex items-center justify-center gap-2 px-3 pt-1 pb-[5px] bg-[#c8f31d71] dark:bg-[#c8f31d] rounded-full font-medium">
+                    Preview
+                    <AiOutlineEye className="text-lg mt-px" />
                   </button>
                 </a>
                 <a href="https://github.com/vivek9985/car-shop" target="_blank">
-                  <button className="flex items-center justify-center gap-2 px-3 py-1 bg-[#c9f31d] rounded-full font-medium">
-                    Code Link
-                    <FaGithub className="text-sm"></FaGithub>
+                  <button className="flex items-center justify-center gap-2 px-3 pt-1 pb-[5px] bg-[#c8f31d71] dark:bg-[#c8f31d] rounded-full font-medium">
+                    Code
+                    <FaGithub className="text-base"></FaGithub>
                   </button>
                 </a>
               </div>
@@ -152,18 +155,18 @@ const Projects = () => {
                   href="https://relaxly-modern-hotel.surge.sh/"
                   target="_blank"
                 >
-                  <button className="flex items-center justify-center gap-2 px-3 py-1 bg-[#c9f31d] rounded-full font-medium">
-                    Live Link
-                    <FaLink className="text-sm"></FaLink>
+                  <button className="flex items-center justify-center gap-2 px-3 pt-1 pb-[5px] bg-[#c8f31d71] dark:bg-[#c8f31d] rounded-full font-medium">
+                    Preview
+                    <AiOutlineEye className="text-lg mt-px" />
                   </button>
                 </a>
                 <a
                   href="https://github.com/vivek9985/hotel-booking-client"
                   target="_blank"
                 >
-                  <button className="flex items-center justify-center gap-2 px-3 py-1 bg-[#c9f31d] rounded-full font-medium">
-                    Code Link
-                    <FaGithub className="text-sm"></FaGithub>
+                  <button className="flex items-center justify-center gap-2 px-3 pt-1 pb-[5px] bg-[#c8f31d71] dark:bg-[#c8f31d] rounded-full font-medium">
+                    Code
+                    <FaGithub className="text-base"></FaGithub>
                   </button>
                 </a>
               </div>
@@ -245,18 +248,18 @@ const Projects = () => {
               </p>
               <div className="flex items-center justify-start gap-3 my-5">
                 <a href="https://gadget-world-2023.surge.sh/" target="_blank">
-                  <button className="flex items-center justify-center gap-2 px-3 py-1 bg-[#c9f31d] rounded-full font-medium">
-                    Live Link
-                    <FaLink className="text-sm"></FaLink>
+                  <button className="flex items-center justify-center gap-2 px-3 pt-1 pb-[5px] bg-[#c8f31d71] dark:bg-[#c8f31d] rounded-full font-medium">
+                    Preview
+                    <AiOutlineEye className="text-lg mt-px" />
                   </button>
                 </a>
                 <a
                   href="https://github.com/vivek9985/gadget-world-client"
                   target="_blank"
                 >
-                  <button className="flex items-center justify-center gap-2 px-3 py-1 bg-[#c9f31d] rounded-full font-medium">
-                    Code Link
-                    <FaGithub className="text-sm"></FaGithub>
+                  <button className="flex items-center justify-center gap-2 px-3 pt-1 pb-[5px] bg-[#c8f31d71] dark:bg-[#c8f31d] rounded-full font-medium">
+                    Code
+                    <FaGithub className="text-base"></FaGithub>
                   </button>
                 </a>
               </div>

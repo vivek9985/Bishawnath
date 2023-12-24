@@ -15,14 +15,14 @@ const Footer = () => {
         </div>
         <div className="hidden md:flex items-end justify-center">
           <p className="text-gray-500 text-sm text-center">
-            © Copyright-All Rights Reserved by Vivek Anando
+            © Copyright-All Rights Reserved by <span className="text-gray-800 font-medium dark:text-gray-500">Bishawnath</span>
           </p>
         </div>
         <div>
           <h2 className="uppercase dhurjati text-xl dark:text-stone-300 md:text-right">
             Socials
           </h2>
-          <ul className="flex items-center md:justify-end gap-5 text-gray-500 dark:text-[#a9e943] text-sm">
+          <ul className="flex items-center md:justify-end gap-5 text-gray-500 font-medium dark:text-[#a9e943] text-sm">
             <li>
               <a
                 href="https://www.linkedin.com/in/vivekanando/"
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         <div className="flex md:hidden items-center justify-center mt-7">
           <p className="text-gray-500 dark:text-stone-400 text-sm text-center">
-            © Copyright-All Rights Reserved by Vivek Anando
+            © Copyright-All Rights Reserved by <span className="text-gray-800 font-medium dark:text-gray-500">Bishawnath</span>
           </p>
         </div>
       </div>

@@ -6,7 +6,6 @@
 
 ::-webkit-scrollbar {
   width: 0.9rem;
-  /* display: none; */
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -18,6 +17,7 @@
   border-style: solid;
   border-color: transparent;
   background-clip: content-box;
+  background-color: #3d0ee47c;
 }
 
 .dhurjati {
@@ -30,7 +30,7 @@
 
 html,
 body {
-  /* user-select: none; */
+  user-select: none;
   overflow-x: hidden;
 }
 .dark {
@@ -101,7 +101,7 @@ body {
   }
 }
 .gradient-text {
-  background: -webkit-linear-gradient(#666262, rgb(198, 201, 18));
+  background: -webkit-linear-gradient(#ffffff, rgb(0, 0, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

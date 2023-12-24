@@ -7,7 +7,7 @@ import Home from "./pages/home/Home";
 import AnimatedCursor from "react-animated-cursor";
 import { Toaster } from "react-hot-toast";
 import ContactPage from "./pages/contact/ContactPage";
-import About from './pages/about/About';
+import About from "./pages/about/About";
 
 const router = createBrowserRouter([
   {
@@ -37,12 +37,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       outerSize={20}
       innerScale={1}
       outerStyle={{
-        backgroundColor: "#e93d0959",
+        backgroundColor: "#861cdd36",
       }}
       innerStyle={{
-        backgroundImage: "#a855f7",
+        background: "#861cdd",
       }}
     /> */}
-    <Toaster/>
+    <Toaster />
   </React.StrictMode>
 );

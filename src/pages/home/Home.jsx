@@ -7,14 +7,14 @@ import Experience from "../../Components/Experience/Experience";
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <Banner></Banner>
       <Skills></Skills>
       <Experience></Experience>
       <Projects></Projects>
       <Services></Services>
       <Contact></Contact>
-    </div>
+    </main>
   );
 };
 

@@ -2,15 +2,25 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 import Tittle from "../Tittle/Tittle";
 import { IoIosRocket } from "react-icons/io";
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { useEffect } from "react";
 
 const Services = () => {
+  useEffect(() => {
+    Aos.init();
+  });
   return (
     <section className="w-9/12 py-20 mx-auto">
       <Tittle text={"Services"}></Tittle>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-20">
+      <div className="flex flex-wrap gap-6 items-center justify-center mt-20">
         {/* one */}
-        <div className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
-          <div className="clip-container w-full h-full bg-[#1db6f3] flex items-center justify-center transition-all duration-500"></div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group"
+        >
+          <div className="clip-container w-full h-full bg-[#f3361d] flex items-center justify-center transition-all duration-700"></div>
           <div className="clip-card bg-transparent absolute">
             <div className="text-center text-stone-500 dark:text-stone-400">
               <p className="text-xl font-medium text-stone-900 dark:text-stone-200 group-hover:text-gray-800 duration-300">
@@ -27,8 +37,11 @@ const Services = () => {
           </span>
         </div>
         {/* two */}
-        <div className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
-          <div className="clip-container w-full h-full bg-[#e5f31d] flex items-center justify-center transition-all duration-500"></div>
+        <div
+        data-aos="fade-up"
+        data-aos-duration="1700"
+        className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
+          <div className="clip-container w-full h-full bg-[#a047e9] flex items-center justify-center transition-all duration-700"></div>
           <div className="clip-card bg-transparent absolute">
             <div className="text-center text-stone-500 dark:text-stone-400">
               <p className="text-xl font-medium text-stone-900 dark:text-stone-200 group-hover:text-gray-950 duration-300">
@@ -46,8 +59,11 @@ const Services = () => {
           </span>
         </div>
         {/* three */}
-        <div className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
-          <div className="clip-container w-full h-full bg-[#7df31d] flex items-center justify-center transition-all duration-500"></div>
+        <div
+        data-aos="fade-up"
+        data-aos-duration="2200"
+        className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
+          <div className="clip-container w-full h-full bg-[#7df31d] flex items-center justify-center transition-all duration-700"></div>
           <div className="clip-card bg-transparent absolute">
             <div className="text-center text-stone-500 dark:text-stone-400">
               <p className="text-xl font-medium text-stone-900 dark:text-stone-200 group-hover:text-gray-950 duration-300">
@@ -61,7 +77,7 @@ const Services = () => {
             </div>
           </div>
           <span className="absolute right-3 top-3 p-1">
-            <IoIosRocket  className="text-gray-900 dark:text-gray-100"></IoIosRocket>
+            <IoIosRocket className="text-gray-900 dark:text-gray-100"></IoIosRocket>
           </span>
         </div>
       </div>
