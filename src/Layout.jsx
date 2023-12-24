@@ -1,28 +1,29 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import { useRef } from "react";
 import gsap from "gsap";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa6";
 import ThemeChange from "../src/Components/ThemeChange/ThemeChange";
+import { useEffect } from "react";
 
 const Layout = () => {
-  const socials = useRef();
-  gsap.from(socials.current, {
-    x: -150,
-  });
-  gsap.to(socials.current, {
-    x: 0,
-    duration: 1.5,
-  });
+  useEffect(() => {
+    gsap.from("#socials", {
+      x: -150,
+    });
+    gsap.to("#socials", {
+      x: 0,
+      duration: 1.5,
+    });
+  }, []);
   return (
     <main className="max-w-[1400px] mx-auto bg-[#fffaf1] dark:bg-[#161616] transition-all duration-300">
       <Header />
       <Outlet />
       <Footer />
       <div
-        ref={socials}
+        id="socials"
         className="w-8 md:w-9 lg:w-11 h-36 md:h-40 lg:h-44 bg-[#c8f31d00] rounded-full fixed right-4 md:left-5 lg:left-8 top-0 bottom-0 my-auto z-10"
       >
         <div className="flex items-center justify-center mb-1.5 cursor-pointer">
