@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   useEffect(() => {
+    gsap.to("#leftProfile", {
+      scale: 1,
+      duration: 1,
+    });
     gsap.from(
       "#textOne, #textTwo, #textThree, #textFour, #textFive, #textSix, #textSeven, #textEight, #textNine, #textTen, #textEleven, #textTwelve, #textThirteen",
       {
@@ -24,14 +28,6 @@ const Banner = () => {
         stagger: 0.1,
       }
     );
-    gsap.to("#leftProfile", {
-      scale: 1,
-      duration: 1,
-    });
-    gsap.to("#profile", {
-      scale: 1,
-      duration: 1,
-    });
     gsap.from("#title, #typing-text, #description, #hireMeButton", {
       y: 100,
       duration: 1.5,
@@ -41,6 +37,12 @@ const Banner = () => {
       y: 0,
       duration: 1.5,
       stagger: 0.1,
+      delay: 0.7
+    });
+    gsap.to("#profile", {
+      scale: 1,
+      duration: 0.8,
+      delay: 0.9
     });
   }, []);
 
@@ -160,7 +162,7 @@ const Banner = () => {
         <div className="col-span-2 flex items-center justify-center md:justify-end mt-24 md:mt-0">
           <div
             id="profile"
-            className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] bg-[#c9f31d] radius-animation scale-150 overflow-hidden"
+            className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] bg-[#c9f31d] radius-animation scale-0 overflow-hidden"
           >
             <img src={profile} alt="" className="w-full h-full" />
           </div>

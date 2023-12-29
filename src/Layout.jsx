@@ -15,6 +15,7 @@ const Layout = () => {
     gsap.to("#socials", {
       x: 0,
       duration: 1.5,
+      delay: 1.2,
     });
   }, []);
   return (

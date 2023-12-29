@@ -68,7 +68,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-40 text-gray-500 dark:text-stone-400">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-32 text-gray-500 dark:text-stone-400">
         <div>
           <h2 className="text-2xl font-medium mb-10">
             Front-end <sup className="text-green-500 text-sm">(Expert)</sup>
@@ -87,7 +87,7 @@ const Skills = () => {
               <span>95%</span>
             </p>
             <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[95%] bg-[#c9f31d] rounded-full"></div>
+              <div className="h-full w-[95%] bg-red-400 rounded-full"></div>
             </div>
           </div>
           <div className="mt-6">
@@ -103,7 +103,7 @@ const Skills = () => {
               <span>90%</span>
             </p>
             <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[90%] bg-[#c9f31d] rounded-full"></div>
+              <div className="h-full w-[90%] bg-blue-500 rounded-full"></div>
             </div>
           </div>
           <div className="mt-6">
@@ -119,7 +119,7 @@ const Skills = () => {
               <span>85%</span>
             </p>
             <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[85%] bg-[#c9f31d] rounded-full"></div>
+              <div className="h-full w-[85%] bg-cyan-500 rounded-full"></div>
             </div>
           </div>
           <div className="mt-6">
@@ -135,7 +135,7 @@ const Skills = () => {
               <span>75%</span>
             </p>
             <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[75%] bg-[#c9f31d] rounded-full"></div>
+              <div className="h-full w-[75%] bg-yellow-300 rounded-full"></div>
             </div>
           </div>
           <div className="mt-6">
@@ -151,7 +151,7 @@ const Skills = () => {
               <span>80%</span>
             </p>
             <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[80%] bg-[#c9f31d] rounded-full"></div>
+              <div className="h-full w-[80%] bg-blue-500 rounded-full"></div>
             </div>
           </div>
         </div>
