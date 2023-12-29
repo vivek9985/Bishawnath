@@ -20,6 +20,9 @@ import projectThreeImageTwo from "../../assets/project-three/two.png";
 import projectThreeImageThree from "../../assets/project-three/three.png";
 import projectThreeImageFour from "../../assets/project-three/four.png";
 import projectThreeImageFive from "../../assets/project-three/five.png";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Projects = () => {
   const [sliderRef] = useKeenSlider(
@@ -57,6 +60,9 @@ const Projects = () => {
       },
     ]
   );
+  useEffect(() => {
+    Aos.init();
+  });
   return (
     <section className="w-10/12 mx-auto mt-40 pb-20">
       <div className="mx-auto flex justify-center text-center">
@@ -67,8 +73,12 @@ const Projects = () => {
       </div>
       <div className="mt-20">
         {/* project one */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          <div ref={sliderRef} className="keen-slider">
+        <div
+          data-aos="flip-left"
+          data-aos-duration="1000"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-5"
+        >
+          <div ref={sliderRef} className="keen-slider rounded-2xl overflow-hidden">
             <div className="keen-slider__slide number-slide1 overflow-hidden">
               <img className="w-full h-full" src={projectOneImageOne} alt="" />
             </div>
@@ -137,7 +147,11 @@ const Projects = () => {
           </div>
         </div>
         {/* project two */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20">
+        <div
+          data-aos="flip-right"
+          data-aos-duration="1200"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20"
+        >
           <div className="flex items-center justify-start gap-3 my-5">
             <div className="pl-3 text-right order-last lg:order-first">
               <h2 className="text-4xl font-medium mt-2 text-gray-800 dark:text-gray-300 dhurjati">
@@ -174,7 +188,7 @@ const Projects = () => {
           </div>
           <div
             ref={sliderRef}
-            className="keen-slider order-first lg:order-last"
+            className="keen-slider order-first lg:order-last rounded-2xl overflow-hidden"
           >
             <div className="keen-slider__slide number-slide1 overflow-hidden">
               <img className="w-full h-full" src={projectTwoImageOne} alt="" />
@@ -195,8 +209,12 @@ const Projects = () => {
           </div>
         </div>
         {/* project three */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20">
-          <div ref={sliderRef} className="keen-slider">
+        <div
+          data-aos="flip-left"
+          data-aos-duration="1400"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20"
+        >
+          <div ref={sliderRef} className="keen-slider rounded-2xl overflow-hidden">
             <div className="keen-slider__slide number-slide1 overflow-hidden">
               <img
                 className="w-full h-full"

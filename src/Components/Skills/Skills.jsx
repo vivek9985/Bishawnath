@@ -173,7 +173,7 @@ const Skills = () => {
                 <span>70%</span>
               </p>
               <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-                <div className="h-full w-[70%] bg-[#c9f31d] rounded-full"></div>
+                <div className="h-full w-[70%] bg-yellow-400 rounded-full"></div>
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ const Skills = () => {
                 <span>60%</span>
               </p>
               <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-                <div className="h-full w-[60%] bg-[#c9f31d] rounded-full"></div>
+                <div className="h-full w-[60%] bg-gray-900 rounded-full"></div>
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@ const Skills = () => {
                 <span>65%</span>
               </p>
               <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-                <div className="h-full w-[65%] bg-[#c9f31d] rounded-full"></div>
+                <div className="h-full w-[65%] bg-green-500 rounded-full"></div>
               </div>
             </div>
           </div>
