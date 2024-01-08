@@ -149,7 +149,7 @@ const Projects = () => {
         {/* project two */}
         <div
           data-aos="flip-right"
-          data-aos-duration="1200"
+          data-aos-duration="1300"
           className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20"
         >
           <div className="flex items-center justify-start gap-3 my-5">

@@ -65,7 +65,7 @@ const Header = () => {
         </a>
       </li>
     </>
-  ); 
+  );
   const mobileMenu = (
     <>
       <li className="relative mb-3" id="menuOne">
@@ -145,7 +145,7 @@ const Header = () => {
         </div>
 
         <div
-          className={`fixed bg-[#969696] dark:bg-[#000000] h-screen overflow-hidden top-0 bottom-0 transition-all rounded-tl-[100px] rounded-bl-[100px] duration-700 ease-in-out ${
+          className={`fixed bg-[#969696] dark:bg-[#000000] h-screen overflow-hidden top-0 bottom-0 transition-all duration-700 ease-in-out ${
             show
               ? "opacity-100 z-40 w-7/12 sm:w-5/12 md:w-5/12 -right-1"
               : "opacity-0 w-4/12 -right-[700px] -z-10"

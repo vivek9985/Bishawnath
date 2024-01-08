@@ -4,7 +4,7 @@ import vivek from "../../assets/vivekfull.png";
 const About = () => {
   return (
     <section className="w-10/12 mx-auto mb-40">
-      <div className="mt-20">
+      <div className="mt-10">
         <Tittle text={"about me"}></Tittle>
       </div>
       <div className="w-[200px] mx-auto bg-purple-400 rounded-full overflow-hidden mt-12 outline-4 outline-offset-2 outline-dotted outline-purple-400">

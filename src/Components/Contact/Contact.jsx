@@ -1,42 +1,74 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import toast from "react-hot-toast";
 import Tittle from "../Tittle/Tittle";
 import { Player } from "@lottiefiles/react-lottie-player";
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { toast } from "sonner";
 
 const Contact = () => {
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_d71oxtf",
-        "template_scwcr8w",
-        form.current,
-        "NzzBjaRH7dprK9I-O"
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          if (result.status == 200) {
-            toast.success("Message Send!");
-            form.current.reset();
+    const name = e.target.user_name.value;
+    const email = e.target.user_email.value;
+    const message = e.target.message.value;
+    if (name === "") {
+      toast.error("Please provide your name.");
+    } else if (email === "") {
+      toast.error("Please provide your email.");
+    } else if (message === "") {
+      toast.error("Please provide a message.");
+    } else {
+      emailjs
+        .sendForm(
+          "service_d71oxtf",
+          "template_scwcr8w",
+          form.current,
+          "NzzBjaRH7dprK9I-O"
+        )
+        .then(
+          (result) => {
+            if (result?.status === 200) {
+              toast.success("Message send!", {
+                icon: (
+                  <Player
+                    className="w-[23px] h-[23px]"
+                    autoplay
+                    loop
+                    src="https://lottie.host/9ee48063-34ab-410d-abf7-03ed6ba77055/mRKOUGnTAM.json"
+                  ></Player>
+                ),
+              });
+            }
+          },
+          (error) => {
+            console.log(error.text);
           }
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+        );
+    }
   };
+  useEffect(() => {
+    Aos.init();
+  });
   return (
-    <section className="w-10/12 mx-auto pt-20 pb-40">
+    <section className="w-10/12 mx-auto pt-10 pb-40">
       <Tittle text={"get in touch"}></Tittle>
-      <p className="text-center -mt-4 mb-8 md:mb-14 font-medium dark:text-stone-200">
-        Feel free to contact me
-      </p>
+      <div className="-mt-4 mb-8 md:mb-2 overflow-hidden">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1400"
+          className="text-center font-medium dark:text-stone-200"
+        >
+          Feel free to contact me
+        </p>
+      </div>
       <div className="grid md:grid-cols-2">
-        <div className="">
+        <div
+          className="flex items-center justify-center"
+          data-aos="fade-up"
+          data-aos-duration="1400"
+        >
           <Player
             className="w-[300px] h-[300px] md:w-[400px] md:h-[400px]"
             autoplay
@@ -49,39 +81,53 @@ const Contact = () => {
           ref={form}
           onSubmit={sendEmail}
         >
-          <div className="relative mb-8 group">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="relative mb-8 group"
+          >
             <label>Name</label>
             <div className="w-0 h-0.5 group-hover:w-full transition-all duration-1000 absolute bottom-0 bg-blue-500"></div>
             <input
               className="w-full focus:outline-none py-2 bg-transparent border-b-2 focus:border-green-500 border-gray-400"
               type="text"
               placeholder="Your name"
-              required
+              // required
               name="user_name"
             />
           </div>
-          <div className="relative mb-8 group">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1300"
+            className="relative mb-8 group"
+          >
             <label>Email</label>
             <div className="w-0 h-0.5 group-hover:w-full transition-all duration-1000 absolute bottom-0 bg-blue-500"></div>
             <input
               className="w-full focus:outline-none py-2 bg-transparent border-b-2 focus:border-green-500 border-gray-400"
               type="email"
               placeholder="Your email"
-              required
+              // required
               name="user_email"
             />
           </div>
-          <div className="relative mb-8 group">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1600"
+            className="relative mb-8 group"
+          >
             <label>Message</label>
             <div className="w-0 h-0.5 group-hover:w-full transition-all duration-1000 absolute bottom-0 bg-blue-500"></div>
             <input
               className="w-full focus:outline-none py-2 bg-transparent border-b-2 focus:border-green-500 border-gray-400"
               placeholder="Message here . . ."
-              required
+              // required
               name="message"
             />
           </div>
           <button
+            data-aos="fade-left"
+            data-aos-duration="2000"
             type="submit"
             className="inline-flex relative bg-[#c9f31d] rounded-full pl-5 pr-12 py-2 text-lg font-semibold text-gray-700 dark:text-gray-900"
           >
