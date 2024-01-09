@@ -33,7 +33,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    <AnimatedCursor
+    {/* <AnimatedCursor
       outerSize={20}
       innerScale={1.5}
       outerStyle={{
@@ -42,7 +42,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       innerStyle={{
         background: "#861cdd",
       }}
-    />
+    /> */}
     <Toaster
       toastOptions={{
         style: {

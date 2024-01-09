@@ -111,7 +111,15 @@ const Header = () => {
     </>
   );
   const showIcon = () => {
-    setShow(!show);
+    setShow(true);
+    gsap.to("#nav-side", {
+      width: "50%",
+      duration: 1,
+      // ease: "bounce.out",
+      // ease: "elastic.out(1,0.3)",
+      ease: "slow(0.7,0.7,false)",
+      stagger: 0.1,
+    });
     gsap.from("#menuOne, #menuTwo, #menuThree, #menuFour", {
       x: 200,
       duration: 1,
@@ -123,6 +131,24 @@ const Header = () => {
       stagger: 0.1,
     });
   };
+  const hideIcon = () => {
+    setShow(false);
+    gsap.to("#nav-side", {
+      width: 0,
+      duration: 1,
+      stagger: 0.1,
+    });
+    gsap.from("#menuOne, #menuTwo, #menuThree, #menuFour", {
+      x: 0,
+      duration: 1,
+      stagger: 0.1,
+    });
+    gsap.to("#menuOne, #menuTwo, #menuThree, #menuFour", {
+      x: 200,
+      duration: 1,
+      stagger: 0.1,
+    });
+  };
 
   return (
     <section className="w-10/12 py-6 mx-auto">
@@ -130,26 +156,29 @@ const Header = () => {
         <div>
           <Logo></Logo>
         </div>
-
         <div className="hidden lg:flex items-center justify-center text-2xl text-gray-700 dark:text-gray-200 dhurjati">
           <ul className="flex items-center justify-center gap-5">{nav}</ul>
         </div>
-
         <div className="block lg:hidden z-50">
-          <div
-            onClick={showIcon}
-            className="bg-[#c9f31d] p-3 rounded-full cursor-pointer text-2xl"
-          >
-            {show ? <IoMdClose /> : <TbMenu />}
-          </div>
+          {show ? (
+            <div
+              onClick={hideIcon}
+              className="bg-[#c9f31d] p-3 rounded-full cursor-pointer text-2xl"
+            >
+              <IoMdClose />
+            </div>
+          ) : (
+            <div
+              onClick={showIcon}
+              className="bg-[#c9f31d] p-3 rounded-full cursor-pointer text-2xl"
+            >
+              <TbMenu />
+            </div>
+          )}
         </div>
-
         <div
-          className={`fixed bg-[#969696] dark:bg-[#000000] h-screen overflow-hidden top-0 bottom-0 transition-all duration-700 ease-in-out ${
-            show
-              ? "opacity-100 z-40 w-7/12 sm:w-5/12 md:w-5/12 -right-1"
-              : "opacity-0 w-4/12 -right-[700px] -z-10"
-          }`}
+          id="nav-side"
+          className="fixed bg-[#a3a3a3] dark:bg-[#0a0a0a] h-screen overflow-hidden top-0 bottom-0 opacity-100 z-40 w-0 -right-1"
         >
           <div className="h-5/6 flex items-center justify-center">
             <ul className="text-4xl sm:text-5xl text-gray-700 dark:text-gray-50 font-semibold tracking-wide dhurjati mt-10">

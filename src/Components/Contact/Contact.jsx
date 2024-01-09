@@ -10,9 +10,10 @@ const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    const name = e.target.user_name.value;
-    const email = e.target.user_email.value;
-    const message = e.target.message.value;
+    const fm = e.target;
+    const name = fm.user_name.value;
+    const email = fm.user_email.value;
+    const message = fm.message.value;
     if (name === "") {
       toast.error("Please provide your name.");
     } else if (email === "") {
@@ -40,6 +41,7 @@ const Contact = () => {
                   ></Player>
                 ),
               });
+              fm.reset();
             }
           },
           (error) => {
