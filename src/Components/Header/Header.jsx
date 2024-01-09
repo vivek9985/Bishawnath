@@ -13,13 +13,13 @@ const Header = () => {
   useEffect(() => {
     gsap.from("#one, #two, #three, #four", {
       y: -80,
-      duration: 2,
-      stagger: 0.2,
+      duration: 1,
+      stagger: 0.1,
     });
     gsap.to("#one, #two, #three, #four", {
       y: 0,
-      duration: 2,
-      stagger: 0.2,
+      duration: 1,
+      stagger: 0.1,
     });
   });
   const nav = (

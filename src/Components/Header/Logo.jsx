@@ -5,13 +5,19 @@ import { gsap } from "gsap";
 
 const Logo = () => {
   useEffect(() => {
+    gsap.from("#logo", {
+      x: -200,
+      duration: 1.5,
+    });
     gsap.to("#logo", {
-      translateY: 2,
-      duration: 2,
+      x: 0,
+      duration: 1.5,
+      // ease: "elastic.out(1,0.3)",
+      ease: "bounce.out",
     });
   });
   return (
-    <div className="-translate-y-20" id="logo">
+    <div className="" id="logo">
       <Link to="/">
         <img src={logo} alt="" className="w-10 h-10 dark:invert" />
       </Link>

@@ -10,7 +10,8 @@ const Banner = () => {
   useEffect(() => {
     gsap.to("#leftProfile", {
       scale: 1,
-      duration: 1,
+      duration: 2,
+      ease: "bounce.out",
     });
     gsap.from(
       "#textOne, #textTwo, #textThree, #textFour, #textFive, #textSix, #textSeven, #textEight, #textNine, #textTen, #textEleven, #textTwelve, #textThirteen",
@@ -37,12 +38,13 @@ const Banner = () => {
       y: 0,
       duration: 1.5,
       stagger: 0.1,
-      delay: 0.7
+      delay: 0.7,
     });
     gsap.to("#profile", {
       scale: 1,
       duration: 0.8,
-      delay: 0.9
+      ease: "bounce.out",
+      delay: 0.9,
     });
   }, []);
 
