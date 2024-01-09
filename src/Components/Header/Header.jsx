@@ -113,11 +113,12 @@ const Header = () => {
   const showIcon = () => {
     setShow(true);
     gsap.to("#nav-side", {
-      width: "50%",
-      duration: 1,
+      width: "55%",
+      duration: 1.5,
       // ease: "bounce.out",
-      // ease: "elastic.out(1,0.3)",
-      ease: "slow(0.7,0.7,false)",
+      ease: "elastic.out(1,0.7)",
+      // ease: "slow(0.7,0.7,false)",
+      // ease: "power4.out",
       stagger: 0.1,
     });
     gsap.from("#menuOne, #menuTwo, #menuThree, #menuFour", {
@@ -136,6 +137,7 @@ const Header = () => {
     gsap.to("#nav-side", {
       width: 0,
       duration: 1,
+      ease: "power4.out",
       stagger: 0.1,
     });
     gsap.from("#menuOne, #menuTwo, #menuThree, #menuFour", {
@@ -157,7 +159,9 @@ const Header = () => {
           <Logo></Logo>
         </div>
         <div className="hidden lg:flex items-center justify-center text-2xl text-gray-700 dark:text-gray-200 dhurjati">
-          <ul className="flex items-center justify-center gap-5">{nav}</ul>
+          <ul className="italic flex items-center justify-center gap-5">
+            {nav}
+          </ul>
         </div>
         <div className="block lg:hidden z-50">
           {show ? (
@@ -178,10 +182,10 @@ const Header = () => {
         </div>
         <div
           id="nav-side"
-          className="fixed bg-[#a3a3a3] dark:bg-[#0a0a0a] h-screen overflow-hidden top-0 bottom-0 opacity-100 z-40 w-0 -right-1"
+          className="fixed bg-[#5c5c5c52] dark:bg-[#ffffff20] h-screen overflow-hidden top-0 bottom-0 opacity-100 z-40 w-0 -right-1 clip"
         >
           <div className="h-5/6 flex items-center justify-center">
-            <ul className="text-4xl sm:text-5xl text-gray-700 dark:text-gray-50 font-semibold tracking-wide dhurjati mt-10">
+            <ul className="italic text-4xl sm:text-5xl text-gray-700 dark:text-gray-50 font-semibold tracking-wide dhurjati mt-10">
               {mobileMenu}
             </ul>
           </div>

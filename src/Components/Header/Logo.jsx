@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/vivek.png";
+import logo from "../../assets/t.webp";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 
@@ -13,7 +13,7 @@ const Logo = () => {
   return (
     <div className="-translate-y-20" id="logo">
       <Link to="/">
-        <img src={logo} alt="" className="w-[80px] h-10 invert dark:invert-0" />
+        <img src={logo} alt="" className="w-10 h-10 dark:invert" />
       </Link>
     </div>
   );
