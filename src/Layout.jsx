@@ -19,10 +19,14 @@ const Layout = () => {
     });
   }, []);
   return (
-    <main className="max-w-[1400px] mx-auto bg-[#fffaf1] dark:bg-[#161616] transition-all duration-300">
-      <Header />
+    <main className="bg-[#fffaf1] dark:bg-[#161616] transition-all duration-300">
+      <div className="max-w-[1600px] mx-auto">
+        <Header />
+      </div>
       <Outlet />
-      <Footer />
+      <div className="max-w-[1600px] mx-auto">
+        <Footer />
+      </div>
       <div
         id="socials"
         className="w-8 md:w-9 lg:w-11 h-36 md:h-40 lg:h-44 bg-[#c8f31d00] rounded-full fixed right-4 md:left-5 lg:left-8 top-0 bottom-0 my-auto z-10"

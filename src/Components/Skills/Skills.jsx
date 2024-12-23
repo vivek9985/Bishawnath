@@ -8,7 +8,7 @@ const Skills = () => {
     Aos.init();
   });
   return (
-    <section className="w-10/12 mx-auto my-20">
+    <section className="max-w-[1600px] mx-auto my-20">
       <Tittle text={"skills"}></Tittle>
 
       <div className="mb-20 overflow-hidden">
@@ -68,7 +68,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-32 text-gray-500 dark:text-stone-400">
+      <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-32 text-gray-500 dark:text-stone-400">
         <div>
           <h2 className="text-2xl font-medium mb-10">
             Front-end <sup className="text-green-500 text-sm">(Expert)</sup>
@@ -111,6 +111,22 @@ const Skills = () => {
               <span className="flex items-center gap-2">
                 <img
                   className="w-[15px] h-[15px]"
+                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg"
+                  alt=""
+                />
+                SCSS
+              </span>
+              <span>90%</span>
+            </p>
+            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
+              <div className="h-full w-[90%] bg-[#e37a9f] rounded-full"></div>
+            </div>
+          </div>
+          <div className="mt-6">
+            <p className="flex items-center justify-between mb-1 font-medium">
+              <span className="flex items-center gap-2">
+                <img
+                  className="w-[15px] h-[15px]"
                   src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg"
                   alt=""
                 />
@@ -120,6 +136,22 @@ const Skills = () => {
             </p>
             <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
               <div className="h-full w-[85%] bg-cyan-500 rounded-full"></div>
+            </div>
+          </div>
+          <div className="mt-6">
+            <p className="flex items-center justify-between mb-1 font-medium">
+              <span className="flex items-center gap-2">
+                <img
+                  className="w-[15px] h-[15px]"
+                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg"
+                  alt=""
+                />
+                BOOTSTRAP 5
+              </span>
+              <span>80%</span>
+            </p>
+            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
+              <div className="h-full w-[80%] bg-purple-600 rounded-full"></div>
             </div>
           </div>
           <div className="mt-6">

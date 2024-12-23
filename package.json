@@ -12,8 +12,10 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@types/isotope-layout": "^3.0.14",
     "aos": "^2.3.4",
     "gsap": "^3.12.3",
+    "isotope-layout": "^3.0.6",
     "keen-slider": "^6.8.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

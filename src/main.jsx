@@ -8,6 +8,7 @@ import AnimatedCursor from "react-animated-cursor";
 import ContactPage from "./pages/contact/ContactPage";
 import About from "./pages/about/About";
 import { Toaster } from "sonner";
+import Package from "./pages/package/Package";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage></ContactPage>,
+      },
+      {
+        path: "/package",
+        element: <Package></Package>,
       },
     ],
   },

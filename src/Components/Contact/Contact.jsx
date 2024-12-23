@@ -59,7 +59,7 @@ const Contact = () => {
     Aos.init();
   });
   return (
-    <section className="w-10/12 mx-auto pt-10 pb-40">
+    <section className="max-w-[1600px] mx-auto pt-10 pb-40">
       <Tittle text={"get in touch"}></Tittle>
       <div className="-mt-4 mb-8 md:mb-2 overflow-hidden">
         <p
@@ -70,7 +70,7 @@ const Contact = () => {
           Feel free to contact me
         </p>
       </div>
-      <div className="grid md:grid-cols-2">
+      <div className="w-10/12 mx-auto grid md:grid-cols-2">
         <div
           className="flex items-center justify-center"
           data-aos="fade-up"

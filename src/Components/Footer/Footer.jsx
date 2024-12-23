@@ -3,7 +3,7 @@ import moment from "moment";
 const Footer = () => {
   const time = moment().format("LT");
   return (
-    <section className="w-full bg-[#9ff52e31] dark:bg-[#1d1d1d]">
+    <section className="max-w-[1600px] mx-auto bg-[#9ff52e31] dark:bg-[#1d1d1d]">
       <div className="w-10/12 mx-auto grid md:grid-cols-3 gap-5 pt-10 md:pt-20 pb-10 md:pb-16">
         <div>
           <h2 className="uppercase dhurjati text-xl dark:text-stone-300">

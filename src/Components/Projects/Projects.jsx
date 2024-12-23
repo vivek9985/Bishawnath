@@ -64,14 +64,14 @@ const Projects = () => {
     Aos.init();
   });
   return (
-    <section className="w-10/12 mx-auto mt-40 pb-20">
+    <section className="max-w-[1600px] mx-auto mt-40 pb-20">
       <div className="mx-auto flex justify-center text-center">
         <Tittle text={"Projects"}></Tittle>
         <sup className="mt-3 ml-1 dhurjati font-bold text-[14px] text-gray-600 dark:text-gray-400">
           03
         </sup>
       </div>
-      <div className="mt-20">
+      <div className="w-10/12 mx-auto mt-20">
         {/* project one */}
         <div
           data-aos="flip-left"

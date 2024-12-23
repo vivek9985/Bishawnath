@@ -8,10 +8,10 @@
   width: 0.9rem;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c9f31d;
+  background-color: #c9f31d;
   border-radius: 5rem;
   border-right: 0.2rem;
   border-style: solid;
@@ -140,4 +140,37 @@ body {
     #832cf5 50%,
     #20ced4 55%
   );
+}
+
+.ticker-1 {
+  animation: ticker-slider 40s linear infinite;
+}
+
+@keyframes ticker-slider {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-4000px);
+  }
+}
+.ticker-2 {
+  animation: ticker-slider-2 40s linear infinite;
+}
+
+@keyframes ticker-slider-2 {
+  0% {
+    transform: translateX(-4000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+.works-bg {
+  background-image: url(../assets/works/works-bg.png);
+  background-repeat: no-repeat;
+  background-size: 105% 105%;
+  background-position: center;
 }

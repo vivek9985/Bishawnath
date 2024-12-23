@@ -1,4 +1,4 @@
-import profile from "../../assets/vivekfull.png";
+import profile from "../../assets/vivek.png";
 import circleText from "../../assets/circle-text.png";
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -49,7 +49,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="pt-[30px] md:pt-[80px] pb-16 overflow-hidden">
+    <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] 2xl:pt-[180px] pb-16 2xl:pb-[180px] overflow-hidden">
       <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-5">
         {/* left column */}
         <div className="col-span-3">
@@ -107,7 +107,7 @@ const Banner = () => {
           <div className="mt-2 overflow-hidden">
             <h1
               id="title"
-              className="text-[50px] md:text-[75px] lg:text-[90px] text-transparent text-animation bg-cover bg-center font-medium tracking-wide lobster leading-[70px] lg:leading-[85px] pl-0.5 dark:grayscale-0 dark:invert"
+              className="text-[50px] md:text-[75px] lg:text-[90px] 2xl:text-[120px] text-transparent text-animation bg-cover bg-center font-medium tracking-wide lobster leading-[70px] lg:leading-[85px] 2xl:leading-[120px] pl-0.5 dark:grayscale-0 dark:invert"
             >
               Bishawnath
             </h1>
@@ -142,7 +142,7 @@ const Banner = () => {
           <div className="mt-2 overflow-hidden">
             <p
               id="description"
-              className="pr-4 font-medium text-gray-500 dark:text-stone-400"
+              className="max-w-[650px] pr-4 font-medium text-gray-500 dark:text-stone-400"
             >
               I'm a front end web developer who is passionate about making error
               free website with client satisfaction. I am strategic, goal
@@ -150,7 +150,7 @@ const Banner = () => {
               clean design, micro animations and interaction.
             </p>
           </div>
-          <div className="flex overflow-hidden">
+          <div className="flex items-center gap-4 overflow-hidden">
             <Link id="hireMeButton" to="/contact">
               <button className="bg-[#c9f31d] hover:bg-black dark:hover:bg-white dark:hover:text-gray-800 hover:text-gray-100 hover:duration-500 hover:ease-linear text-lg tracking-wide lobster flex items-center justify-center pl-7 pr-5 group pt-[6px] pb-[7px] rounded-full mt-6 relative">
                 Hire me
@@ -164,9 +164,9 @@ const Banner = () => {
         <div className="col-span-2 flex items-center justify-center md:justify-end mt-24 md:mt-0">
           <div
             id="profile"
-            className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] bg-[#c9f31d] radius-animation scale-0 overflow-hidden"
+            className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] 2xl:w-[450px] 2xl:h-[450px] bg-[#c9f31d] radius-animation scale-0 overflow-hidden"
           >
-            <img src={profile} alt="" className="w-full h-full" />
+            <img src={profile} alt="" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>

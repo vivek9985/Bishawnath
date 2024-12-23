@@ -1,5 +1,5 @@
 import Tittle from "../../Components/Tittle/Tittle";
-import vivek from "../../assets/vivekfull.png";
+import vivek from "../../assets/vivek.png";
 
 const About = () => {
   return (
