@@ -35,26 +35,26 @@ const Works = () => {
                     03
                 </sup>
             </div>
-            <ul className="mt-5 w-fit mx-auto flex items-center justify-center gap-4 bg-[#ffffff2f] bg-opacity-80 backdrop-blur-md rounded-full px-4 py-2.5 shadow-lg transition-all duration-300">
-                <li className={`text-white bg-gradient-to-r hover:bg-gradient-to-br font-medium rounded-full text-lg px-5 py-2.5 text-center cursor-pointer ${filterKey === "*" ? "from-red-200 via-red-600 to-red-300 bg-gradient-to-br" : "from-blue-400 via-blue-500 to-blue-600"}`} onClick={handleFilterKeyChange("*")}>All</li>
-                <li className={`text-white bg-gradient-to-r hover:bg-gradient-to-br font-medium rounded-full text-lg px-5 py-2.5 text-center cursor-pointer ${filterKey === "frontend" ? "from-red-200 via-red-600 to-red-300 bg-gradient-to-br" : "from-blue-400 via-blue-500 to-blue-600"}`} onClick={handleFilterKeyChange("frontend")}>Frontend</li>
-                <li className={`text-white bg-gradient-to-r hover:bg-gradient-to-br font-medium rounded-full text-lg px-5 py-2.5 text-center cursor-pointer ${filterKey === "backend" ? "from-red-200 via-red-600 to-red-300 bg-gradient-to-br" : "from-blue-400 via-blue-500 to-blue-600"}`} onClick={handleFilterKeyChange("backend")}>Full Stack</li>
+            <ul className="mt-5 w-fit mx-auto flex items-center flex-wrap justify-center gap-3 md:gap-4 bg-[#ffffff2f] bg-opacity-80 backdrop-blur-md rounded-full px-3 md:px-4 py-2 md:py-2.5 shadow-lg transition-all duration-300">
+                <li className={`text-white bg-gradient-to-br hover:bg-gradient-to-br font-medium rounded-full text-base md:text-lg px-4 md:px-5 py-1.5 md:py-2.5 text-center cursor-pointer ${filterKey === "*" ? "from-red-200 via-red-600 to-red-300 bg-gradient-to-br" : "from-blue-400 via-blue-500 to-blue-600"}`} onClick={handleFilterKeyChange("*")}>All</li>
+                <li className={`text-white bg-gradient-to-br hover:bg-gradient-to-br font-medium rounded-full text-base md:text-lg px-4 md:px-5 py-1.5 md:py-2.5 text-center cursor-pointer ${filterKey === "frontend" ? "from-red-200 via-red-600 to-red-300 bg-gradient-to-br" : "from-blue-400 via-blue-500 to-blue-600"}`} onClick={handleFilterKeyChange("frontend")}>Frontend</li>
+                <li className={`text-white bg-gradient-to-br hover:bg-gradient-to-br font-medium rounded-full text-base md:text-lg px-4 md:px-5 py-1.5 md:py-2.5 text-center cursor-pointer ${filterKey === "backend" ? "from-red-200 via-red-600 to-red-300 bg-gradient-to-br" : "from-blue-400 via-blue-500 to-blue-600"}`} onClick={handleFilterKeyChange("backend")}>Full Stack</li>
             </ul>
-            <div className="w-10/12 mx-auto mt-10">
+            <div className="w-10/12 mx-auto mt-7 md:mt-10">
                 <div className="filter-container w-full mx-auto">
-                    <a href="https://imash.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[48%] p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    <a href="https://imash.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={imash} alt="" />
                         </div>
                         <div className="mt-2 p-3 flex items-center justify-between">
-                            <div>
-                                <h3 className="text-2xl font-semibold text-white">imash</h3>
-                                <ul className="mt-1 flex items-center gap-2 text-stone-400">
+                            <div className="w-10/12">
+                                <h3 className="text-xl sm:text-2xl font-semibold text-white">imash</h3>
+                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
                                     <li>Tailwind</li>
                                     <li>Js</li>
                                 </ul>
                             </div>
-                            <div className="w-14 h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
+                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
                                 <div className="flex items-center justify-center gap-4 -rotate-45">
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
@@ -62,20 +62,20 @@ const Works = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="https://spectre-one.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[48%] p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    <a href="https://spectre-one.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={spectre} alt="" />
                         </div>
                         <div className="mt-2 p-3 flex items-center justify-between">
-                            <div>
-                                <h3 className="text-2xl font-semibold text-white">Spectre</h3>
-                                <ul className="mt-1 flex items-center gap-2 text-stone-400">
+                            <div className="w-10/12">
+                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Spectre</h3>
+                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
                                     <li>Tailwind</li>
                                     <li>Next Js</li>
                                     <li>Typescript</li>
                                 </ul>
                             </div>
-                            <div className="w-14 h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
+                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
                                 <div className="flex items-center justify-center gap-4 -rotate-45">
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
@@ -83,14 +83,14 @@ const Works = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="https://relaxly-modern-hotel.surge.sh/" target="_blank" rel="noopener noreferrer" className="filter-item backend w-[48%] p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    <a href="https://relaxly-modern-hotel.surge.sh/" target="_blank" rel="noopener noreferrer" className="filter-item backend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={relaxly} alt="" />
                         </div>
                         <div className="mt-2 p-3 flex items-center justify-between">
-                            <div>
-                                <h3 className="text-2xl font-semibold text-white">Relaxly</h3>
-                                <ul className="mt-1 flex items-center gap-2 text-stone-400">
+                            <div className="w-10/12">
+                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Relaxly</h3>
+                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
                                     <li>Tailwind</li>
                                     <li>React Js</li>
                                     <li>Firebase</li>
@@ -98,7 +98,7 @@ const Works = () => {
                                     <li>MongoDB</li>
                                 </ul>
                             </div>
-                            <div className="w-14 h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
+                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
                                 <div className="flex items-center justify-center gap-4 -rotate-45">
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
@@ -106,14 +106,14 @@ const Works = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="https://gadget-world-2023.surge.sh/" target="_blank" rel="noopener noreferrer" className="filter-item backend w-[48%] p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    <a href="https://gadget-world-2023.surge.sh/" target="_blank" rel="noopener noreferrer" className="filter-item backend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={gadget} alt="" />
                         </div>
                         <div className="mt-2 p-3 flex items-center justify-between">
-                            <div>
-                                <h3 className="text-2xl font-semibold text-white">Gadget</h3>
-                                <ul className="mt-1 flex items-center gap-2 text-stone-400">
+                            <div className="w-10/12">
+                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Gadget</h3>
+                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
                                     <li>Tailwind</li>
                                     <li>React Js</li>
                                     <li>Firebase</li>
@@ -121,7 +121,7 @@ const Works = () => {
                                     <li>MongoDB</li>
                                 </ul>
                             </div>
-                            <div className="w-14 h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
+                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
                                 <div className="flex items-center justify-center gap-4 -rotate-45">
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
                                     <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
