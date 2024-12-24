@@ -1,250 +1,61 @@
-import { useEffect } from "react";
 import Tittle from "../Tittle/Tittle";
 import "aos/dist/aos.css";
-import Aos from "aos";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-  useEffect(() => {
-    Aos.init();
-  });
+  const skills = [
+    { id: 1, name: "HTML", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/HTML.svg" },
+    { id: 2, name: "CSS", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg" },
+    { id: 3, name: "SCSS", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" },
+    { id: 4, name: "Tailwind", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg" },
+    { id: 5, name: "Javascript", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/JavaScript.svg" },
+    { id: 6, name: "Typescript", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" },
+    { id: 7, name: "Gsap", icon: "https://assets.codepen.io/16327/internal/avatars/users/default.png?fit=crop&format=auto&height=256&version=1697554632&width=256" },
+    { id: 8, name: "React", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" },
+    { id: 9, name: "Next Js", icon: "https://www.robiulhasan.dev/images/icons/next-js.png" },
+    { id: 10, name: "Node Js", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" },
+    { id: 11, name: "Express", icon: "https://www.robiulhasan.dev/images/icons/express.png" },
+    { id: 12, name: "MongoDB", icon: "https://www.robiulhasan.dev/images/icons/mongodb.png" },
+    { id: 13, name: "Mongoose", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongoose/mongoose.png" },
+  ];
+
+  useGSAP(() => {
+    gsap.from(".skill", {
+      scrollTrigger: {
+        trigger: ".skill",
+        start: "top 90%",
+        end: "bottom 50%",
+        scrub: true,
+      },
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1
+    })
+  })
   return (
     <section className="max-w-[1600px] mx-auto my-20">
       <Tittle text={"skills"}></Tittle>
+      <div className="w-11/12 md:w-8/12 mx-auto mt-10">
+        <div className="flex items-center justify-center flex-wrap gap-3">
+          {skills.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center gap-3 px-5 py-2.5 rounded-md bg-[#00000030] dark:bg-[#ffffff10] skill"
+            >
+              <img
+                className="w-6 h-6"
+                src={item.icon}
+                alt={`${item.name} logo`}
+              />
+              <span className="text-sm font-medium text-stone-900 dark:text-white">{item.name}</span>
+            </div>
+          ))}
 
-      <div className="mb-20 overflow-hidden">
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1100"
-          className="pb-4 flex items-center justify-center"
-        >
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/HTML.svg"
-            />
-          </div>
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg"
-            />
-          </div>
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg"
-            />
-          </div>
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/JavaScript.svg"
-            />
-          </div>
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/React.svg"
-            />
-          </div>
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/Firebase-Dark.svg"
-            />
-          </div>
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/ExpressJS-Dark.svg"
-            />
-          </div>
-          <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden -ml-3">
-            <img
-              className="w-full h-full rounded-full p-0.5"
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/MongoDB.svg"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-32 text-gray-500 dark:text-stone-400">
-        <div>
-          <h2 className="text-2xl font-medium mb-10">
-            Front-end <sup className="text-green-500 text-sm">(Expert)</sup>
-          </h2>
-
-          <div className="mt-6">
-            <p className="flex items-center justify-between mb-1 font-medium">
-              <span className="flex items-center gap-2">
-                <img
-                  className="w-[15px] h-[15px]"
-                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/HTML.svg"
-                  alt=""
-                />
-                HTML 5
-              </span>
-              <span>95%</span>
-            </p>
-            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[95%] bg-red-400 rounded-full"></div>
-            </div>
-          </div>
-          <div className="mt-6">
-            <p className="flex items-center justify-between mb-1 font-medium">
-              <span className="flex items-center gap-2">
-                <img
-                  className="w-[15px] h-[15px]"
-                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg"
-                  alt=""
-                />
-                CSS 3
-              </span>
-              <span>90%</span>
-            </p>
-            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[90%] bg-blue-500 rounded-full"></div>
-            </div>
-          </div>
-          <div className="mt-6">
-            <p className="flex items-center justify-between mb-1 font-medium">
-              <span className="flex items-center gap-2">
-                <img
-                  className="w-[15px] h-[15px]"
-                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg"
-                  alt=""
-                />
-                SCSS
-              </span>
-              <span>90%</span>
-            </p>
-            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[90%] bg-[#e37a9f] rounded-full"></div>
-            </div>
-          </div>
-          <div className="mt-6">
-            <p className="flex items-center justify-between mb-1 font-medium">
-              <span className="flex items-center gap-2">
-                <img
-                  className="w-[15px] h-[15px]"
-                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg"
-                  alt=""
-                />
-                TAILWIND
-              </span>
-              <span>85%</span>
-            </p>
-            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[85%] bg-cyan-500 rounded-full"></div>
-            </div>
-          </div>
-          <div className="mt-6">
-            <p className="flex items-center justify-between mb-1 font-medium">
-              <span className="flex items-center gap-2">
-                <img
-                  className="w-[15px] h-[15px]"
-                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg"
-                  alt=""
-                />
-                BOOTSTRAP 5
-              </span>
-              <span>80%</span>
-            </p>
-            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[80%] bg-purple-600 rounded-full"></div>
-            </div>
-          </div>
-          <div className="mt-6">
-            <p className="flex items-center justify-between mb-1 font-medium">
-              <span className="flex items-center gap-2">
-                <img
-                  className="w-[15px] h-[15px]"
-                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/JavaScript.svg"
-                  alt=""
-                />
-                JAVASCRIPT
-              </span>
-              <span>75%</span>
-            </p>
-            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[75%] bg-yellow-300 rounded-full"></div>
-            </div>
-          </div>
-          <div className="mt-6">
-            <p className="flex items-center justify-between mb-1 font-medium">
-              <span className="flex items-center gap-2">
-                <img
-                  className="w-[15px] h-[15px]"
-                  src="https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/React.svg"
-                  alt=""
-                />
-                REACT
-              </span>
-              <span>80%</span>
-            </p>
-            <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-              <div className="h-full w-[80%] bg-blue-500 rounded-full"></div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h2 className="text-2xl font-medium mb-10">
-            Back-end <sup className="text-red-500 text-sm">(Familiar)</sup>
-          </h2>
-          <div>
-            <div className="mt-6">
-              <p className="flex items-center justify-between mb-1 font-medium">
-                <span className="flex items-center gap-2">
-                  <img
-                    className="w-[15px] h-[15px]"
-                    src="https://github.com/tandpfun/skill-icons/raw/main/icons/Firebase-Dark.svg"
-                    alt=""
-                  />
-                  FIREBASE
-                </span>
-                <span>70%</span>
-              </p>
-              <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-                <div className="h-full w-[70%] bg-yellow-400 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="mt-6">
-              <p className="flex items-center justify-between mb-1 font-medium">
-                <span className="flex items-center gap-2">
-                  <img
-                    className="w-[15px] h-[15px]"
-                    src="https://github.com/tandpfun/skill-icons/raw/main/icons/ExpressJS-Dark.svg"
-                    alt=""
-                  />
-                  EXPRESS
-                </span>
-                <span>60%</span>
-              </p>
-              <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-                <div className="h-full w-[60%] bg-gray-900 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="mt-6">
-              <p className="flex items-center justify-between mb-1 font-medium">
-                <span className="flex items-center gap-2">
-                  <img
-                    className="w-[15px] h-[15px]"
-                    src="https://github.com/tandpfun/skill-icons/raw/main/icons/MongoDB.svg"
-                    alt=""
-                  />
-                  MONGODB
-                </span>
-                <span>65%</span>
-              </p>
-              <div className="w-full h-3 bg-[#888] rounded-full overflow-hidden">
-                <div className="h-full w-[65%] bg-green-500 rounded-full"></div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

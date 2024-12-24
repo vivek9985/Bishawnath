@@ -1,59 +1,66 @@
 import profile from "../../assets/vivek.png";
 import circleText from "../../assets/circle-text.png";
-import { useEffect } from "react";
-import { gsap } from "gsap";
 import { TypeAnimation } from "react-type-animation";
 import { IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Banner = () => {
-  useEffect(() => {
-    gsap.to("#leftProfile", {
-      scale: 1,
-      duration: 2,
-      ease: "bounce.out",
+  useGSAP(() => {
+    gsap.from("#leftProfile", {
+      scale: 0,
+      x: 300,
+      opacity: 0,
+      delay: 1.3,
+      duration: 0.6,
+      ease: "power2.out",
     });
     gsap.from(
-      "#textOne, #textTwo, #textThree, #textFour, #textFive, #textSix, #textSeven, #textEight, #textNine, #textTen, #textEleven, #textTwelve, #textThirteen",
+      "#textOne, #textTwo, #textThree, #textFour",
       {
         y: 40,
-        duration: 0.7,
+        delay: 1.6,
+        duration: 0.6,
         stagger: 0.1,
       }
     );
-    gsap.to(
-      "#textOne, #textTwo, #textThree, #textFour, #textFive, #textSix, #textSeven, #textEight, #textNine, #textTen, #textEleven, #textTwelve, #textThirteen",
-      {
-        y: 0,
-        duration: 0.7,
-        stagger: 0.1,
-      }
-    );
-    gsap.from("#title, #typing-text, #description, #hireMeButton", {
+    gsap.from("#title", {
+      y: 150,
+      delay: 2.3,
+      duration: 0.6,
+    });
+    gsap.from("#typing-text", {
       y: 100,
-      duration: 1.5,
-      stagger: 0.1,
+      delay: 2.9,
+      duration: 0.6,
     });
-    gsap.to("#title, #typing-text, #description, #hireMeButton", {
-      y: 0,
-      duration: 1.5,
-      stagger: 0.1,
-      delay: 0.7,
+    gsap.from("#description", {
+      y: 250,
+      delay: 3.6,
+      duration: 0.6,
     });
-    gsap.to("#profile", {
-      scale: 1,
-      duration: 0.8,
-      ease: "bounce.out",
-      delay: 0.9,
+    gsap.from("#hireMeButton", {
+      y: 80,
+      delay: 3.9,
+      duration: 0.6,
     });
-  }, []);
+    gsap.from("#profile", {
+      scale: 0.5,
+      y: 700,
+      opacity: 0,
+      delay: 4.3,
+      duration: 0.6,
+      ease: "slow(0.7,0.7,false)",
+    });
+  })
 
   return (
     <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] 2xl:pt-[180px] pb-16 2xl:pb-[180px] overflow-hidden">
       <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-5">
         {/* left column */}
         <div className="col-span-3">
-          <div id="leftProfile" className="scale-0 w-[90px] h-[90px] relative">
+          <div id="leftProfile" className="w-[90px] h-[90px] relative">
             <div className="w-[90px] h-[90px] overflow-hidden rotate-animation">
               <img
                 src={circleText}
@@ -84,25 +91,10 @@ const Banner = () => {
             </div>
           </div>
           <div className="flex mt-4 pl-1 font-medium text-2xl text-gray-500 dark:text-stone-300 dhurjati overflow-hidden">
-            <h2 id="textOne">H</h2>
-            <h2 id="textTwo">i,</h2>
-            <h2 id="textThree" className="opacity-0">
-              i
-            </h2>
-            <h2 id="textFour">m</h2>
-            <h2 id="textFive">y</h2>
-            <h2 id="textSix" className="opacity-0">
-              i
-            </h2>
-            <h2 id="textSeven">n</h2>
-            <h2 id="textEight">a</h2>
-            <h2 id="textNine">m</h2>
-            <h2 id="textTen">e</h2>
-            <h2 id="textEleven" className="opacity-0">
-              i
-            </h2>
-            <h2 id="textTwelve">i</h2>
-            <h2 id="textThirteen">s</h2>
+            <span id="textOne">Hi,</span>
+            <span id="textTwo" className="pl-1">my</span>
+            <span id="textThree" className="pl-1">name</span>
+            <span id="textFour" className="pl-1">is</span>
           </div>
           <div className="mt-2 overflow-hidden">
             <h1
@@ -164,7 +156,7 @@ const Banner = () => {
         <div className="col-span-2 flex items-center justify-center md:justify-end mt-24 md:mt-0">
           <div
             id="profile"
-            className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] 2xl:w-[450px] 2xl:h-[450px] bg-[#c9f31d] radius-animation scale-0 overflow-hidden"
+            className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] 2xl:w-[450px] 2xl:h-[450px] bg-[#c9f31d] radius-animation overflow-hidden"
           >
             <img src={profile} alt="" className="w-full h-full object-cover" />
           </div>

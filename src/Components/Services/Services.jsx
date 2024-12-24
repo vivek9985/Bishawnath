@@ -38,9 +38,9 @@ const Services = () => {
         </div>
         {/* two */}
         <div
-        data-aos="fade-up"
-        data-aos-duration="1700"
-        className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
+          data-aos="fade-up"
+          data-aos-duration="1700"
+          className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
           <div className="clip-container w-full h-full bg-[#a047e9] flex items-center justify-center transition-all duration-700"></div>
           <div className="clip-card bg-transparent absolute">
             <div className="text-center text-stone-500 dark:text-stone-400">
@@ -60,9 +60,9 @@ const Services = () => {
         </div>
         {/* three */}
         <div
-        data-aos="fade-up"
-        data-aos-duration="2200"
-        className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
+          data-aos="fade-up"
+          data-aos-duration="2200"
+          className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
           <div className="clip-container w-full h-full bg-[#7df31d] flex items-center justify-center transition-all duration-700"></div>
           <div className="clip-card bg-transparent absolute">
             <div className="text-center text-stone-500 dark:text-stone-400">

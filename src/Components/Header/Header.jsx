@@ -5,21 +5,17 @@ import { TbMenu } from "react-icons/tb";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa6";
 import { TbCloudDownload } from "react-icons/tb";
-import { gsap } from "gsap";
 import Logo from "./Logo";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  useEffect(() => {
+  useGSAP(() => {
     gsap.from("#one, #two, #three, #four", {
-      y: -80,
+      y: -90,
       duration: 1,
-      stagger: 0.1,
-    });
-    gsap.to("#one, #two, #three, #four", {
-      y: 0,
-      duration: 1,
-      stagger: 0.1,
+      stagger: 0.2,
     });
   });
   const nav = (
@@ -66,88 +62,23 @@ const Header = () => {
       </li>
     </>
   );
-  const mobileMenu = (
-    <>
-      <li className="relative mb-3" id="menuOne">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "text-[#c9f31d] menu" : "menu"
-          }
-        >
-          Home
-        </NavLink>
-      </li>
-      <li className="relative mb-3" id="menuTwo">
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? "text-[#c9f31d] menu" : "menu"
-          }
-        >
-          About
-        </NavLink>
-      </li>
-      <li className="relative mb-3" id="menuThree">
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            isActive ? "text-[#c9f31d] menu" : "menu"
-          }
-        >
-          Contact
-        </NavLink>
-      </li>
-      <li className="relative mb-3" id="menuFour">
-        <a
-          className="rounded-full flex items-center gap-2 menu"
-          download="Your_CV_File_Name.pdf"
-          href="https://drive.google.com/uc?export=download&id=189V5j8VIENSkjP6RH3x1_WFojbwzjIRJ"
-        >
-          <span>Resume</span>
-          <TbCloudDownload className="mt-3 text-[22px] md:text-3xl" />
-        </a>
-      </li>
-    </>
-  );
   const showIcon = () => {
     setShow(true);
     gsap.to("#nav-side", {
-      width: "55%",
+      width: "45%",
+      borderRadius: "0%",
       duration: 1.5,
-      // ease: "bounce.out",
-      ease: "elastic.out(1,0.7)",
-      // ease: "slow(0.7,0.7,false)",
-      // ease: "power4.out",
-      stagger: 0.1,
-    });
-    gsap.from("#menuOne, #menuTwo, #menuThree, #menuFour", {
-      x: 200,
-      duration: 1,
-      stagger: 0.1,
-    });
-    gsap.to("#menuOne, #menuTwo, #menuThree, #menuFour", {
-      x: 0,
-      duration: 1,
+      ease: "elastic.out(1,0.8)",
       stagger: 0.1,
     });
   };
   const hideIcon = () => {
     setShow(false);
     gsap.to("#nav-side", {
-      width: 0,
+      width: "0",
+      borderRadius: "100% 0% 0% 100%",
       duration: 1,
-      ease: "power4.out",
-      stagger: 0.1,
-    });
-    gsap.from("#menuOne, #menuTwo, #menuThree, #menuFour", {
-      x: 0,
-      duration: 1,
-      stagger: 0.1,
-    });
-    gsap.to("#menuOne, #menuTwo, #menuThree, #menuFour", {
-      x: 200,
-      duration: 1,
+      ease: "power4.in",
       stagger: 0.1,
     });
   };
@@ -182,11 +113,50 @@ const Header = () => {
         </div>
         <div
           id="nav-side"
-          className="fixed bg-[#5c5c5c52] dark:bg-[#ffffff20] h-screen overflow-hidden top-0 bottom-0 opacity-100 z-40 w-0 -right-1 clip"
+          className="w-[0%] fixed bg-[#1c1b1b] dark:bg-[#ffffff] h-screen overflow-hidden rounded-tl-[100%] rounded-bl-[100%] top-0 bottom-0 z-40 -right-1 translate-y-[-0%] clip"
         >
           <div className="h-5/6 flex items-center justify-center">
-            <ul className="italic text-4xl sm:text-5xl text-gray-700 dark:text-gray-50 font-semibold tracking-wide dhurjati mt-10">
-              {mobileMenu}
+            <ul className="text-4xl sm:text-5xl dark:text-gray-900 text-stone-50 font-semibold tracking-wide dhurjati mt-10">
+              <li className="relative mb-3">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "text-[#c9f31d] menu" : "menu"
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="relative mb-3">
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "text-[#c9f31d] menu" : "menu"
+                  }
+                >
+                  About
+                </NavLink>
+              </li>
+              <li className="relative mb-3">
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "text-[#c9f31d] menu" : "menu"
+                  }
+                >
+                  Contact
+                </NavLink>
+              </li>
+              <li className="relative mb-3">
+                <a
+                  className="rounded-full flex items-center gap-2 menu"
+                  download="Your_CV_File_Name.pdf"
+                  href="https://drive.google.com/uc?export=download&id=189V5j8VIENSkjP6RH3x1_WFojbwzjIRJ"
+                >
+                  <span>Resume</span>
+                  <TbCloudDownload className="mt-3 text-[22px] md:text-3xl" />
+                </a>
+              </li>
             </ul>
           </div>
           <div className="h-1/6 flex justify-center ">

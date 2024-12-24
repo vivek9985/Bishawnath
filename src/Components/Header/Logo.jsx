@@ -1,19 +1,14 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/t.webp";
-import { useEffect } from "react";
-import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Logo = () => {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.from("#logo", {
-      x: -200,
-      duration: 1.5,
-    });
-    gsap.to("#logo", {
-      x: 0,
-      duration: 1.5,
-      // ease: "elastic.out(1,0.3)",
-      ease: "bounce.out",
+      y: -100,
+      scale: 0,
+      duration: 0.6,
     });
   });
   return (

@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 0.9rem;
+  width: 0.5rem;
+  display: none;
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
@@ -17,7 +18,6 @@
   border-style: solid;
   border-color: transparent;
   background-clip: content-box;
-  /* background-color: #3d0ee47c; */
 }
 
 .dhurjati {
@@ -74,7 +74,7 @@ body {
 }
 .clip {
   backdrop-filter: blur(70px);
-  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  /* clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%); */
 }
 
 .radius-animation {
@@ -143,7 +143,7 @@ body {
 }
 
 .ticker-1 {
-  animation: ticker-slider 40s linear infinite;
+  animation: ticker-slider 100s linear infinite;
 }
 
 @keyframes ticker-slider {
@@ -155,7 +155,7 @@ body {
   }
 }
 .ticker-2 {
-  animation: ticker-slider-2 40s linear infinite;
+  animation: ticker-slider-2 100s linear infinite;
 }
 
 @keyframes ticker-slider-2 {

@@ -32,7 +32,7 @@ const Works = () => {
             <div className="mx-auto flex justify-center text-center">
                 <Tittle text={"Recent Works"}></Tittle>
                 <sup className="mt-3 ml-1 dhurjati font-bold text-[14px] text-gray-600 dark:text-gray-400">
-                    03
+                    04
                 </sup>
             </div>
             <ul className="mt-5 w-fit mx-auto flex items-center flex-wrap justify-center gap-3 md:gap-4 bg-[#ffffff2f] bg-opacity-80 backdrop-blur-md rounded-full px-3 md:px-4 py-2 md:py-2.5 shadow-lg transition-all duration-300">

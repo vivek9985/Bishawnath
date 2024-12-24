@@ -1,21 +1,18 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import gsap from "gsap";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa6";
 import ThemeChange from "../src/Components/ThemeChange/ThemeChange";
-import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Layout = () => {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.from("#socials", {
-      x: -150,
-    });
-    gsap.to("#socials", {
-      x: 0,
-      duration: 1.5,
-      delay: 1.2,
+      y: 150,
+      duration: 1.2,
+      delay: 4.4,
     });
   }, []);
   return (
@@ -29,12 +26,9 @@ const Layout = () => {
       </div>
       <div
         id="socials"
-        className="w-8 md:w-9 lg:w-11 h-36 md:h-40 lg:h-44 bg-[#c8f31d00] rounded-full fixed right-4 md:left-5 lg:left-8 top-0 bottom-0 my-auto z-10"
+        className="w-[190px] md:w-[220px] h-9 md:h-11 rounded-full flex items-center justify-center gap-3 fixed left-0 right-0 bottom-4 mx-auto z-10"
       >
-        <div className="flex items-center justify-center mb-1.5 cursor-pointer">
-          <ThemeChange></ThemeChange>
-        </div>
-        <ul className="w-full h-full rounded-full flex flex-col items-center justify-center gap-4 md:gap-5 bg-[#c9f31d]">
+        <ul className="w-full h-full rounded-full flex items-center justify-center gap-4 md:gap-5 bg-[#c9f31d]">
           <a href="https://dribbble.com/vivek9985" target="_blank">
             <FaDribbble className="hover:scale-150 transition-all duration-300"></FaDribbble>
           </a>
@@ -48,6 +42,9 @@ const Layout = () => {
             <FaGithub className="hover:scale-150 transition-all duration-300"></FaGithub>
           </a>
         </ul>
+        <div className="flex items-center justify-center cursor-pointer">
+          <ThemeChange></ThemeChange>
+        </div>
       </div>
     </main>
   );
