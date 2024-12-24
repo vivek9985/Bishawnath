@@ -28,13 +28,13 @@ const Skills = () => {
       scrollTrigger: {
         trigger: ".skill",
         start: "top 90%",
-        end: "bottom 50%",
+        end: "bottom 30%",
         scrub: true,
       },
       y: 100,
       opacity: 0,
-      duration: 1,
-      stagger: 0.1
+      duration: 2,
+      stagger: 0.2
     })
   })
   return (
