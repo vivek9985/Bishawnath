@@ -7,8 +7,13 @@ import ThemeChange from "../src/Components/ThemeChange/ThemeChange";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import CustomCursor from './Components/CustomCursor/CustomCursor';
+import LocomotiveScroll from 'locomotive-scroll';
+import { useEffect } from "react";
 
 const Layout = () => {
+  useEffect(() => {
+    new LocomotiveScroll();
+  })
   useGSAP(() => {
     gsap.from("#socials", {
       y: 150,

@@ -19,6 +19,7 @@
     "isotope-layout": "^3.0.6",
     "keen-slider": "^6.8.6",
     "localforage": "^1.10.0",
+    "locomotive-scroll": "^5.0.0-beta.21",
     "match-sorter": "^6.3.1",
     "moment": "^2.29.4",
     "react": "^18.3.1",
