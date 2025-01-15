@@ -174,3 +174,18 @@ body {
   background-size: 105% 105%;
   background-position: center;
 }
+
+
+
+.service-ticker {
+  animation: ticker-slider-2 100s linear infinite;
+}
+
+@keyframes ticker-slider-2 {
+  0% {
+    transform: translateX(-4000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

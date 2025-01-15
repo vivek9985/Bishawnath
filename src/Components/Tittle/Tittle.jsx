@@ -2,6 +2,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+// eslint-disable-next-line react/prop-types
 const Tittle = ({ text }) => {
   useEffect(() => {
     Aos.init();

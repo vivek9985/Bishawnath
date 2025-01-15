@@ -18,9 +18,6 @@ const Ticker = () => {
     <section className="mt-20 mb-32">
       <div className="w-[110%] mx-auto -translate-x-2 rotate-[3deg] bg-black dark:bg-gray-200 -mb-[85px]">
         <div className="py-4 flex items-center gap-12 whitespace-nowrap ticker-1">
-          {/* {ticker.map((item) => (
-            <div>{item}</div>
-          ))} */}
           <div className="flex items-center gap-12">
             <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
               Figma to html
@@ -156,7 +153,7 @@ const Ticker = () => {
         </div>
       </div>
       <div className="w-[110%] mx-auto -translate-x-2 -rotate-[5deg] bg-black dark:bg-gray-200">
-      <div className="py-4 flex items-center gap-12 whitespace-nowrap ticker-2">
+        <div className="py-4 flex items-center gap-12 whitespace-nowrap ticker-2">
           <div className="flex items-center gap-12">
             <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
               Figma to html

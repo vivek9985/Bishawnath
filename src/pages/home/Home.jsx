@@ -5,16 +5,20 @@ import Contact from "../../Components/Contact/Contact";
 import Experience from "../../Components/Experience/Experience";
 import Ticker from "../../Components/Ticker/Ticker";
 import Works from "../../Components/Works/Works";
+import Pricing from "../../Components/Pricing/Pricing";
+import ServiceTicker from "../../Components/Ticker/ServiceTicker";
 
 const Home = () => {
   return (
     <main>
-      <Banner></Banner>
-      <Skills></Skills>
-      <Experience></Experience>
+      <Banner />
+      <Skills />
+      <Experience />
       <Works />
-      <Services></Services>
-      <Ticker></Ticker>
+      <Services />
+      {/* <Ticker /> */}
+      <ServiceTicker />
+      <Pricing />
       <Contact></Contact>
     </main>
   );
