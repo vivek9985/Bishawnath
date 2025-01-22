@@ -56,7 +56,7 @@ const Banner = () => {
   })
 
   return (
-    <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] 2xl:pt-[180px] pb-16 2xl:pb-[180px] overflow-hidden">
+    <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] xl:pt-[90px] 2xl:pt-[150px] pb-16 2xl:pb-[180px] overflow-hidden">
       <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-5">
         {/* left column */}
         <div className="col-span-3">
@@ -151,7 +151,6 @@ const Banner = () => {
             </Link>
           </div>
         </div>
-
         {/* right column */}
         <div className="col-span-2 flex items-center justify-center md:justify-end mt-24 md:mt-0">
           <div

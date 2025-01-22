@@ -4,13 +4,14 @@ import spectre from "../../assets/works/spectre.png"
 import imash from "../../assets/works/imash.png"
 import relaxly from "../../assets/works/relaxly.png"
 import gadget from "../../assets/works/gadget.png"
+import dreamitt from "../../assets/works/dreamitt.png"
 import { MdOutlineArrowForward } from "react-icons/md";
 import Tittle from "../Tittle/Tittle";
 
 
 const Works = () => {
     const isotope = useRef(null);
-    const [filterKey, setFilterKey] = useState("*");
+    const [filterKey, setFilterKey] = useState("frontend");
     useEffect(() => {
         isotope.current = new Isotope(".filter-container", {
             itemSelector: ".filter-item",
@@ -42,6 +43,27 @@ const Works = () => {
             </ul>
             <div className="w-10/12 mx-auto mt-7 md:mt-10">
                 <div className="filter-container w-full mx-auto">
+                    <a href="https://spectre-one.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                        <div>
+                            <img className="w-[100%] h-[100%] rounded-xl" src={spectre} alt="" />
+                        </div>
+                        <div className="mt-2 p-3 flex items-center justify-between">
+                            <div className="w-10/12">
+                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Spectre</h3>
+                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
+                                    <li>Tailwind</li>
+                                    <li>Next Js</li>
+                                    <li>Typescript</li>
+                                </ul>
+                            </div>
+                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
+                                <div className="flex items-center justify-center gap-4 -rotate-45">
+                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
+                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                     <a href="https://imash.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={imash} alt="" />
@@ -62,17 +84,17 @@ const Works = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="https://spectre-one.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    <a href="https://dreamit-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="filter-item frontend w-[99%] lg:w-[48%] p-2.5 sm:p-4 m-2 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
-                            <img className="w-[100%] h-[100%] rounded-xl" src={spectre} alt="" />
+                            <img className="w-[100%] h-[100%] rounded-xl" src={dreamitt} alt="" />
                         </div>
                         <div className="mt-2 p-3 flex items-center justify-between">
                             <div className="w-10/12">
-                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Spectre</h3>
+                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Dreamitt</h3>
                                 <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
                                     <li>Tailwind</li>
-                                    <li>Next Js</li>
-                                    <li>Typescript</li>
+                                    <li>Js</li>
+                                    <li>Gsap</li>
                                 </ul>
                             </div>
                             <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">

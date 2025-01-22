@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { TbMenu } from "react-icons/tb";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -53,8 +53,8 @@ const Header = () => {
       <li className="relative mb-3" id="four">
         <a
           className="rounded-full flex items-center gap-2 menu"
-          download="Your_CV_File_Name.pdf"
-          href="https://drive.google.com/uc?export=download&id=189V5j8VIENSkjP6RH3x1_WFojbwzjIRJ"
+          download="bishawnath's-resume.pdf"
+          href="../../assets/bishawnath's-resume.pdf"
         >
           <span>Resume</span>
           <TbCloudDownload className="mt-1 text-[19px]" />
@@ -150,8 +150,8 @@ const Header = () => {
               <li className="relative mb-3">
                 <a
                   className="rounded-full flex items-center gap-2 menu"
-                  download="Your_CV_File_Name.pdf"
-                  href="https://drive.google.com/uc?export=download&id=189V5j8VIENSkjP6RH3x1_WFojbwzjIRJ"
+                  download="bishawnath's-resume.pdf"
+                  href="../../assets/bishawnath's-resume.pdf"
                 >
                   <span>Resume</span>
                   <TbCloudDownload className="mt-3 text-[22px] md:text-3xl" />
