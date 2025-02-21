@@ -167,15 +167,12 @@ body {
   }
 }
 
-
 .works-bg {
   background-image: url(../assets/works/works-bg.png);
   background-repeat: no-repeat;
   background-size: 105% 105%;
   background-position: center;
 }
-
-
 
 .service-ticker {
   animation: ticker-slider-2 100s linear infinite;
@@ -187,5 +184,31 @@ body {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+
+/* ----------------Logo---------------- */
+#logo svg path {
+  fill: transparent;
+  stroke: #c9f31d;
+  stroke-width: 3;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: textAnimation 4s ease-in-out 0.1s 1 forwards;
+}
+#logo svg path:hover {
+  fill: #c9f31d;
+  transition: all 1s ease;
+}
+#logo svg path:not(:hover) {
+  transition: all 2s ease;
+}
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  100% {
+    stroke-width: 3;
+    stroke-dashoffset: 0;
   }
 }

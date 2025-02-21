@@ -8,50 +8,21 @@ import gsap from "gsap";
 
 const Banner = () => {
   useGSAP(() => {
-    gsap.from("#leftProfile", {
-      scale: 0,
-      x: 300,
+    gsap.from(".fadeup", {
+      y: 200,
       opacity: 0,
-      delay: 1.3,
-      duration: 0.6,
-      ease: "power2.out",
-    });
-    gsap.from(
-      "#textOne, #textTwo, #textThree, #textFour",
-      {
-        y: 40,
-        delay: 1.6,
-        duration: 0.6,
-        stagger: 0.1,
-      }
-    );
-    gsap.from("#title", {
-      y: 150,
-      delay: 2.3,
-      duration: 0.6,
-    });
-    gsap.from("#typing-text", {
-      y: 100,
-      delay: 2.9,
-      duration: 0.6,
-    });
-    gsap.from("#description", {
-      y: 250,
-      delay: 3.6,
-      duration: 0.6,
-    });
-    gsap.from("#hireMeButton", {
-      y: 80,
-      delay: 3.9,
-      duration: 0.6,
+      stagger: 0.3,
+      duration: 0.7,
+      delay: 1.8,
+      ease: "power3.out",
     });
     gsap.from("#profile", {
       scale: 0.5,
       y: 700,
       opacity: 0,
-      delay: 4.3,
-      duration: 0.6,
-      ease: "slow(0.7,0.7,false)",
+      duration: 1.5,
+      delay: 2.8,
+      ease: "power3.inOut",
     });
   })
 
@@ -60,7 +31,7 @@ const Banner = () => {
       <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-5">
         {/* left column */}
         <div className="col-span-3">
-          <div id="leftProfile" className="w-[90px] h-[90px] relative">
+          <div className="w-[90px] h-[90px] relative fadeup">
             <div className="w-[90px] h-[90px] overflow-hidden rotate-animation">
               <img
                 src={circleText}
@@ -91,23 +62,16 @@ const Banner = () => {
             </div>
           </div>
           <div className="flex mt-4 pl-1 font-medium text-2xl text-gray-500 dark:text-stone-300 dhurjati overflow-hidden">
-            <span id="textOne">Hi,</span>
-            <span id="textTwo" className="pl-1">my</span>
-            <span id="textThree" className="pl-1">name</span>
-            <span id="textFour" className="pl-1">is</span>
+            <span className="fadeup">Hi, my name is</span>
           </div>
           <div className="mt-2 overflow-hidden">
-            <h1
-              id="title"
-              className="text-[50px] md:text-[75px] lg:text-[90px] 2xl:text-[120px] text-transparent text-animation bg-cover bg-center font-medium tracking-wide lobster leading-[70px] lg:leading-[85px] 2xl:leading-[120px] pl-0.5 dark:grayscale-0 dark:invert"
+            <h1 className="text-[50px] md:text-[75px] lg:text-[90px] 2xl:text-[120px] text-transparent text-animation bg-cover bg-center font-medium tracking-wide lobster leading-[70px] lg:leading-[85px] 2xl:leading-[120px] pl-0.5 dark:grayscale-0 dark:invert fadeup"
             >
               Bishawnath
             </h1>
           </div>
           <div className="mt-1 overflow-hidden">
-            <div
-              id="typing-text"
-              className="dhurjati font-medium flex items-center gap-3 pl-0.5"
+            <div className="dhurjati font-medium flex items-center gap-3 pl-0.5 fadeup"
             >
               <h2 className="text-[23px] sm:text-[33px] text-gray-950 dark:text-gray-50">
                 I'm a{" "}
@@ -122,6 +86,8 @@ const Banner = () => {
                     1000,
                     "React Developer.",
                     1000,
+                    "Next Js Developer.",
+                    1000,
                   ]}
                   wrapper="span"
                   speed={10}
@@ -132,19 +98,16 @@ const Banner = () => {
             </div>
           </div>
           <div className="mt-2 overflow-hidden">
-            <p
-              id="description"
-              className="max-w-[650px] pr-4 font-medium text-gray-500 dark:text-stone-400"
-            >
+            <p className="max-w-[650px] pr-4 font-medium text-gray-500 dark:text-stone-400 fadeup">
               I'm a front end web developer who is passionate about making error
               free website with client satisfaction. I am strategic, goal
               oriented and always work with an end goal in mind. My focus is on
               clean design, micro animations and interaction.
             </p>
           </div>
-          <div className="flex items-center gap-4 overflow-hidden">
-            <Link id="hireMeButton" to="/contact">
-              <button className="bg-[#c9f31d] hover:bg-black dark:hover:bg-white dark:hover:text-gray-800 hover:text-gray-100 hover:duration-500 hover:ease-linear text-lg tracking-wide lobster flex items-center justify-center pl-7 pr-5 group pt-[6px] pb-[7px] rounded-full mt-6 relative">
+          <div className="flex items-center gap-4">
+            <Link to="/contact">
+              <button className="bg-[#c9f31d] hover:bg-black dark:hover:bg-white dark:hover:text-gray-800 hover:text-gray-100 hover:duration-500 hover:ease-linear text-lg tracking-wide lobster flex items-center justify-center pl-7 pr-5 group pt-[6px] pb-[7px] rounded-full mt-6 relative fadeup">
                 Hire me
                 <IoIosArrowUp className="rotate-90 transition-all duration-300 group-hover:ml-1 mt-0.5" />
               </button>

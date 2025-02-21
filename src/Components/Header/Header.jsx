@@ -11,16 +11,9 @@ import gsap from "gsap";
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  useGSAP(() => {
-    gsap.from("#one, #two, #three, #four", {
-      y: -90,
-      duration: 1,
-      stagger: 0.2,
-    });
-  });
   const nav = (
     <>
-      <li className="relative mb-3" id="one">
+      <li className="relative mb-3 fade-down">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -30,7 +23,7 @@ const Header = () => {
           Home
         </NavLink>
       </li>
-      <li className="relative mb-3" id="two">
+      <li className="relative mb-3 fade-down">
         <NavLink
           to="/about"
           className={({ isActive }) =>
@@ -40,7 +33,7 @@ const Header = () => {
           About
         </NavLink>
       </li>
-      <li className="relative mb-3" id="three">
+      <li className="relative mb-3 fade-down">
         <NavLink
           to="/contact"
           className={({ isActive }) =>
@@ -50,7 +43,7 @@ const Header = () => {
           Contact
         </NavLink>
       </li>
-      <li className="relative mb-3" id="four">
+      <li className="relative mb-3 fade-down">
         <a
           className="rounded-full flex items-center gap-2 menu"
           download="bishawnath's-resume.pdf"
@@ -82,11 +75,18 @@ const Header = () => {
       stagger: 0.1,
     });
   };
+  useGSAP(() => {
+    gsap.from(".fade-down", {
+      y: -100,
+      stagger: 0.3,
+      duration: 1
+    });
+  });
 
   return (
     <section className="w-10/12 py-6 mx-auto">
       <div className="flex items-center justify-between">
-        <div>
+        <div className="fade-down">
           <Logo></Logo>
         </div>
         <div className="hidden lg:flex items-center justify-center text-2xl text-gray-700 dark:text-gray-200 dhurjati">
