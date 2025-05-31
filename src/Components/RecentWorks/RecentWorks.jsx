@@ -1,8 +1,8 @@
 import spectre from "../../assets/works/spectre.png"
 import imash from "../../assets/works/imash.png"
-import relaxly from "../../assets/works/relaxly.png"
-import gadget from "../../assets/works/gadget.png"
-import dreamitt from "../../assets/works/dreamitt.png"
+// import relaxly from "../../assets/works/relaxly.png"
+// import gadget from "../../assets/works/gadget.png"
+// import dreamitt from "../../assets/works/dreamitt.png"
 import monks from "../../assets/works/monks.png"
 import { MdOutlineArrowForward } from "react-icons/md";
 import Tittle from "../Tittle/Tittle";
@@ -82,7 +82,7 @@ const RecentWorks = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="https://dreamit-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    {/* <a href="https://dreamit-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={dreamitt} alt="" />
                         </div>
@@ -124,30 +124,7 @@ const RecentWorks = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
-                    <a href="https://gadget-world-2023.surge.sh/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
-                        <div>
-                            <img className="w-[100%] h-[100%] rounded-xl" src={gadget} alt="" />
-                        </div>
-                        <div className="mt-2 p-3 flex items-center justify-between">
-                            <div className="w-10/12">
-                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Gadget</h3>
-                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
-                                    <li>Tailwind</li>
-                                    <li>React Js</li>
-                                    <li>Firebase</li>
-                                    <li>Express</li>
-                                    <li>MongoDB</li>
-                                </ul>
-                            </div>
-                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
-                                <div className="flex items-center justify-center gap-4 -rotate-45">
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </a> */}
                 </div>
             </div>
 

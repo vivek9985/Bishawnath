@@ -6,7 +6,7 @@ import { FaDribbble } from "react-icons/fa6";
 import ThemeChange from "../src/Components/ThemeChange/ThemeChange";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import CustomCursor from './Components/CustomCursor/CustomCursor';
+// import CustomCursor from './Components/CustomCursor/CustomCursor';
 import LocomotiveScroll from 'locomotive-scroll';
 import { useEffect } from "react";
 
@@ -47,7 +47,7 @@ const Layout = () => {
           />
         </svg>
       </div>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <div className="bg-[#fffaf1] dark:bg-[#161616] transition-all duration-300">
         <div className="max-w-[1600px] mx-auto">
           <Header />
