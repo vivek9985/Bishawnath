@@ -31,6 +31,7 @@ const RecentWorks = () => {
                                     <li>Tailwind</li>
                                     <li>Next Js</li>
                                     <li>Typescript</li>
+                                    <li>Gsap</li>
                                 </ul>
                             </div>
                             <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
@@ -41,7 +42,7 @@ const RecentWorks = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="https://monkswizard.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    <a href="https://monkswizard.netlify.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={monks} alt="" />
                         </div>
@@ -52,6 +53,7 @@ const RecentWorks = () => {
                                     <li>Tailwind</li>
                                     <li>Next Js</li>
                                     <li>Typescript</li>
+                                    <li>Framer motion</li>
                                 </ul>
                             </div>
                             <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
@@ -71,7 +73,8 @@ const RecentWorks = () => {
                                 <h3 className="text-xl sm:text-2xl font-semibold text-white">imash</h3>
                                 <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
                                     <li>Tailwind</li>
-                                    <li>Js</li>
+                                    <li>Javascript</li>
+                                    <li>Aos</li>
                                 </ul>
                             </div>
                             <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
