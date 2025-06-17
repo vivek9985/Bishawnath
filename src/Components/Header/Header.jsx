@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { TbMenu } from "react-icons/tb";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa6";
-import { TbCloudDownload } from "react-icons/tb";
+// import { TbCloudDownload } from "react-icons/tb";
 import Logo from "./Logo";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -46,12 +46,18 @@ const Header = () => {
       <li className="relative mb-3 fade-down">
         <a
           className="rounded-full flex items-center gap-2 menu"
+          href="https://drive.google.com/file/d/1DvKN0c0faQX36lL73X8ZLNlx94fpiNkS/view?usp=sharing"
+        >
+          Resume
+        </a>
+        {/* <a
+          className="rounded-full flex items-center gap-2 menu"
           download="bishawnath's-resume.pdf"
           href="../../assets/bishawnath's-resume.pdf"
         >
           <span>Resume</span>
           <TbCloudDownload className="mt-1 text-[19px]" />
-        </a>
+        </a> */}
       </li>
     </>
   );
@@ -150,12 +156,18 @@ const Header = () => {
               <li className="relative mb-3">
                 <a
                   className="rounded-full flex items-center gap-2 menu"
+                  href="https://drive.google.com/file/d/1DvKN0c0faQX36lL73X8ZLNlx94fpiNkS/view?usp=sharing"
+                >
+                  Resume
+                </a>
+                {/* <a
+                  className="rounded-full flex items-center gap-2 menu"
                   download="bishawnath's-resume.pdf"
                   href="../../assets/bishawnath's-resume.pdf"
                 >
                   <span>Resume</span>
                   <TbCloudDownload className="mt-3 text-[22px] md:text-3xl" />
-                </a>
+                </a> */}
               </li>
             </ul>
           </div>
