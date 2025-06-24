@@ -2,54 +2,61 @@ import { useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-
 import profile from "../../assets/vivek.png";
 import circleText from "../../assets/circle-text.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitText from "./SplitText";
 
 const Banner = () => {
-  const fadeRefs = useRef([]);
   const profileRef = useRef(null);
-  const textPhotoWrap = useRef(null);
+  const subTitleRef = useRef(null);
+  const roleRef = useRef(null);
+  const boxRef = useRef(null);
+  const nameRef = useRef(null);
+  const imageRef = useRef(null);
 
   useGSAP(() => {
     const tl = gsap.timeline();
-
-    tl.from(fadeRefs.current, {
-      y: 80,
-      opacity: 0,
+    tl.from(profileRef.current, {
+      scale: 0,
+      delay: 0.1,
       duration: 0.5,
-      // ease: "power1.out",
-      ease: "slow(0.7,0.7,false)",
-      stagger: 0.2,
-    }).from(
-      profileRef.current,
-      {
-        scale: 0.5,
-        y: 300,
-        opacity: 0,
-        duration: 0.5,
-        // ease: "power3.out",
-        ease: "slow(0.7,0.7,false)",
-      },
-      "-=0.6"
-    );
+      ease: "power1.out",
+    });
+    tl.to([subTitleRef.current, roleRef.current, boxRef.current], {
+      width: 0,
+      duration: 0.5,
+      delay: 0.5,
+      ease: "power1.out",
+      stagger: 0.3,
+    });
+    tl.from(imageRef.current, {
+      opacity: 0,
+      transform: 'translateY(300px)',
+      duration: 1.2,
+      ease: "elastic.out(1,0.6)",
+    });
+    gsap.to(".splittext", {
+      opacity: 0,
+      duration: 0.7,
+      delay: 2.5,
+      ease: "power3.out",
+    });
+    gsap.to(nameRef.current, {
+      opacity: 1,
+      duration: 0.5,
+      delay: 1.8,
+      ease: "power3.out",
+    });
   }, []);
 
-  const addToFadeRefs = (el) => {
-    if (el && !fadeRefs.current.includes(el)) {
-      fadeRefs.current.push(el);
-    }
-  };
-
   return (
-    <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] xl:pt-[90px] 2xl:pt-[150px] pb-16 2xl:pb-[180px] overflow-hidden">
-      <div className="w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-5">
+    <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] xl:pt-[90px] 2xl:pt-[150px] pb-16 2xl:pb-[180px]">
+      <div className="w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-6">
         {/* Left Column */}
-        <div className="col-span-3" ref={textPhotoWrap}>
-          {/* Circular profile badge */}
-          <div className="w-[90px] h-[90px] relative" ref={addToFadeRefs}>
+        <div className="col-span-3">
+          <div className="w-[90px] h-[90px] relative" ref={profileRef}>
             <div className="w-[90px] h-[90px] overflow-hidden rotate-animation">
               <img
                 src={circleText}
@@ -75,35 +82,47 @@ const Banner = () => {
           </div>
 
           {/* Greeting */}
-          <div
-            className="mt-4 pl-1 font-medium text-2xl text-gray-500 dark:text-stone-300 dhurjati"
-            ref={addToFadeRefs}
-          >
+          <div className="w-fit leading-[90%] mt-4 pl-1 font-medium text-2xl text-gray-500 dark:text-stone-300 dhurjati relative overflow-hidden">
             Hi, my name is
+            <div className="w-full h-full absolute top-0 left-0 bg-[#fffaf1] dark:bg-[#161616]" ref={subTitleRef}
+            ></div>
           </div>
 
           {/* Name */}
-          <div ref={addToFadeRefs}>
-            <h1 className="text-[50px] md:text-[75px] lg:text-[90px] 2xl:text-[120px] text-transparent text-animation bg-cover bg-center font-medium tracking-wide lobster leading-[70px] lg:leading-[85px] 2xl:leading-[120px] pl-0.5 dark:grayscale-0 dark:invert">
-              Bishawnath
+          <div className="overflow-hidden w-fit mt-4">
+            <h1
+              className="text-[50px] md:text-[75px] lg:text-[90px] 2xl:text-[120px] text-animation bg-cover bg-center font-medium tracking-wide lobster leading-[70px] lg:leading-[85px] 2xl:leading-[110px] pl-0.5 dark:grayscale-0 dark:invert relative text-transparent"
+            >
+              <SplitText
+                text="Bishawnath"
+                type="chars"
+                className="text-[#580094] dark:text-[#c9f31d] invert-0 dark:invert absolute left-0 right-0 top-0 bottom-0 m-auto z-5 splittext"
+                animation={{
+                  y: 150,
+                  delay: 1.5,
+                  duration: 0.4,
+                  ease: "power1.out",
+                  stagger: 0.05,
+                }}
+              />
+              <span className="opacity-0" ref={nameRef}>Bishawnath</span>
             </h1>
           </div>
 
           {/* Role */}
-          <div ref={addToFadeRefs}>
-            <div className="dhurjati font-medium flex items-center gap-3 pl-0.5">
-              <h2 className="text-[23px] sm:text-[33px] text-gray-950 dark:text-gray-50">
+          <div className="w-full overflow-hidden relative">
+            <div className="w-full font-semibold uppercase flex items-center gap-3 mt-4 mb-2.5">
+              <h2 className="text-[22px] sm:text-[28px] leading-[100%] text-gray-950 dark:text-gray-50">
                 I&apos;m a{" "}
               </h2>
-              <div className="pt-0.5 text-fuchsia-700 dark:text-cyan-300">
+              <div className="text-fuchsia-700 dark:text-sky-400 text-[20px] sm:text-[30px] leading-[100%]">
                 <TypeAnimation
-                  className="font-medium text-[20px] sm:text-[33px]"
                   sequence={[
-                    "Web Developer.",
+                    "Mern Developer.",
                     1000,
-                    "Front-end Developer.",
+                    "Express Js Developer.",
                     1000,
-                    "React Developer.",
+                    "React Js Developer.",
                     1000,
                     "Next Js Developer.",
                     1000,
@@ -115,17 +134,21 @@ const Banner = () => {
                 />
               </div>
             </div>
+            <div className="w-full h-full absolute top-0 left-0 bg-[#fffaf1] dark:bg-[#161616]" ref={roleRef}
+            ></div>
           </div>
 
           {/* About Text */}
-          <div ref={addToFadeRefs}>
-            <p className="max-w-[650px] pr-4 mt-2 font-medium text-gray-500 dark:text-stone-400">
+          <div className="overflow-hidden relative">
+            <p className="max-w-[650px] pr-4 mt-2 font-semibold text-gray-500 dark:text-stone-400">
               I&apos;m a front end web developer who is passionate about making error-free websites with client satisfaction. I am strategic, goal-oriented, and always work with an end goal in mind. My focus is on clean design, micro animations, and interaction.
             </p>
+            <div className="w-full h-full absolute top-0 left-0 bg-[#fffaf1] dark:bg-[#161616]" ref={boxRef}
+            ></div>
           </div>
 
           {/* Hire Me Button */}
-          <div className="flex items-center gap-4" ref={addToFadeRefs}>
+          <div className="flex items-center gap-4">
             <Link to="/contact">
               <button className="bg-[#c9f31d] hover:bg-black dark:hover:bg-white dark:hover:text-gray-800 hover:text-gray-100 hover:duration-500 hover:ease-linear text-lg tracking-wide lobster flex items-center justify-center pl-7 pr-5 group pt-[6px] pb-[7px] rounded-full mt-6 relative">
                 Hire me
@@ -136,11 +159,8 @@ const Banner = () => {
         </div>
 
         {/* Right Column - Profile */}
-        <div className="col-span-2 flex items-center justify-center lg:justify-end mt-24 lg:mt-0">
-          <div
-            ref={profileRef}
-            className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] 2xl:w-[450px] 2xl:h-[450px] bg-[#c9f31d] radius-animation overflow-hidden"
-          >
+        <div className="col-span-3 flex items-center justify-center lg:justify-end mt-24 lg:mt-0">
+          <div className="shadow-2xl dark:shadow-[#c8f31d46] dark:shadow-lg w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] 2xl:w-[450px] 2xl:h-[450px] bg-[#c9f31d] radius-animation overflow-hidden" ref={imageRef}>
             <img src={profile} alt="profile" className="w-full h-full object-cover" />
           </div>
         </div>
