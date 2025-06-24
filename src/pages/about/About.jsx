@@ -1,9 +1,11 @@
 import Tittle from "../../Components/Tittle/Tittle";
+import Socials from "../../Components/Widget/Socials";
 import vivek from "../../assets/vivek.png";
 
 const About = () => {
   return (
     <section className="w-10/12 mx-auto mb-60 mt-28">
+        <Socials />
       <div className="mt-10">
         <Tittle text={"about me"}></Tittle>
       </div>

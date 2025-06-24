@@ -22,7 +22,7 @@ const ThemeChange = () => {
   return (
     <div
       onClick={changeTheme}
-      className="w-8 md:w-9 lg:w-11 h-8 md:h-9 lg:h-11 transition-all duration-100 bg-[#c9f31d] rounded-full text-xl md:text-[23px] flex items-center justify-center"
+      className="w-11 h-11 transition-all duration-100 bg-[#c9f31d] rounded-full text-xl md:text-[23px] flex items-center justify-center"
     >
       {mode == "dark" ? (
         <MdOutlineLightMode className="hover:rotate-[360deg] transition-all duration-500" />

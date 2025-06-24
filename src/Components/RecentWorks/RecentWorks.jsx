@@ -2,7 +2,7 @@ import spectre from "../../assets/works/spectre.png"
 import imash from "../../assets/works/imash.png"
 // import relaxly from "../../assets/works/relaxly.png"
 // import gadget from "../../assets/works/gadget.png"
-// import dreamitt from "../../assets/works/dreamitt.png"
+import dreamitt from "../../assets/works/dreamitt.png"
 import monks from "../../assets/works/monks.png"
 import { MdOutlineArrowForward } from "react-icons/md";
 import Tittle from "../Tittle/Tittle";
@@ -11,7 +11,7 @@ import Tittle from "../Tittle/Tittle";
 
 const RecentWorks = () => {
     return (
-        <div className="max-w-[1600px] mx-auto mt-40 pb-20">
+        <div className="max-w-[1600px] mx-auto mt-10 pb-20">
             <div className="mx-auto flex justify-center text-center">
                 <Tittle text={"Recent Works"}></Tittle>
                 <sup className="mt-3 ml-1 dhurjati font-bold text-[14px] text-gray-600 dark:text-gray-400">
@@ -85,7 +85,7 @@ const RecentWorks = () => {
                             </div>
                         </div>
                     </a>
-                    {/* <a href="https://dreamit-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    <a href="https://dreamit-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={dreamitt} alt="" />
                         </div>
@@ -105,7 +105,7 @@ const RecentWorks = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="https://relaxly-modern-hotel.surge.sh/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
+                    {/* <a href="https://relaxly-modern-hotel.surge.sh/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
                         <div>
                             <img className="w-[100%] h-[100%] rounded-xl" src={relaxly} alt="" />
                         </div>

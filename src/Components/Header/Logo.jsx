@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <div className="" id="logo">
+    <div className="scale-90 md:scale-100 invert dark:invert-0" id="logo">
       <Link to="/">
         <svg
           width="48"

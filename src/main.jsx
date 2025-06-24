@@ -8,6 +8,7 @@ import ContactPage from "./pages/contact/ContactPage";
 import About from "./pages/about/About";
 import { Toaster } from "sonner";
 import Package from "./pages/package/Package";
+import ProjectPage from "./pages/project/ProjectPage";
 
 const router = createBrowserRouter([
   {
@@ -20,15 +21,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About></About>,
+        element: <About />,
       },
       {
         path: "/contact",
-        element: <ContactPage></ContactPage>,
+        element: <ContactPage />,
+      },
+      {
+        path: "/project",
+        element: <ProjectPage />,
       },
       {
         path: "/package",
-        element: <Package></Package>,
+        element: <Package />,
       },
     ],
   },
