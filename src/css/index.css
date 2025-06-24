@@ -218,3 +218,28 @@ body {
     stroke-dashoffset: 0;
   }
 }
+/* ========================================nav=========================================*/
+
+/* #main .one {
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s ease-in;
+}
+
+#main .one:hover {
+  width: 70px;
+  height: 70px;
+  background-color: #f00;
+}
+
+#main .one .two {
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-in;
+}
+
+#main .one:hover .two {
+  width: 60px;
+  height: 60px;
+  background-color: #00f;
+} */
