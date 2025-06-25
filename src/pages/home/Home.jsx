@@ -1,27 +1,25 @@
-import Banner from "../../Components/Banner/Banner";
-import Services from "../../Components/Services/Services";
-import Skills from "../../Components/Skills/Skills";
-import Contact from "../../Components/Contact/Contact";
-import Experience from "../../Components/Experience/Experience";
-import Ticker from "../../Components/Ticker/Ticker";
-// import Works from "../../Components/Works/Works";
-import Pricing from "../../Components/Pricing/Pricing";
-// import ServiceTicker from "../../Components/Ticker/ServiceTicker";
-import RecentWorks from "../../Components/RecentWorks/RecentWorks";
+import Ticker from "../../Components/Widget/Ticker/Ticker";
+import Hero from "../../Components/Section/Home/Hero";
+import Skills from './../../Components/Section/Shared/Skills';
+import Experience from './../../Components/Section/Home/Experience';
+// import Works from './../../Components/Section/Home/Works';
+import RecentWorks from "../../Components/Section/Home/RecentWorks";
+import Services from './../../Components/Section/Home/Services';
+import Pricing from './../../Components/Section/Home/Pricing';
+import Contact from './../../Components/Section/Shared/Contact';
 
 const Home = () => {
   return (
     <main>
-      <Banner />
+      <Hero />
       <Skills />
       <Experience />
       {/* <Works /> */}
       <RecentWorks />
       <Services />
       <Ticker />
-      {/* <ServiceTicker /> */}
       <Pricing />
-      <Contact></Contact>
+      <Contact />
     </main>
   );
 };

@@ -29,9 +29,9 @@ const SplitText = ({
     }, []);
 
     return (
-        <h2 ref={textRef} className={className}>
+        <div ref={textRef} className={className}>
             {text}
-        </h2>
+        </div>
     );
 };
 

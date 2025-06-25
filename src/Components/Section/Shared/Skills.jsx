@@ -1,4 +1,4 @@
-import Tittle from "../Tittle/Tittle";
+import Tittle from "../../Tittle/Tittle";
 import "aos/dist/aos.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

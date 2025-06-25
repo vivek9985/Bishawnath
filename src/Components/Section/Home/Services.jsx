@@ -1,6 +1,6 @@
 import { FaGlobeAmericas } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
-import Tittle from "../Tittle/Tittle";
+import Tittle from "../../Tittle/Tittle";
 import { IoIosRocket } from "react-icons/io";
 import "aos/dist/aos.css";
 import Aos from "aos";
@@ -27,7 +27,7 @@ const Services = () => {
                 Create Website
               </p>
               <p className="px-3 mt-2 font-medium text-sm group-hover:text-gray-800 duration-300">
-                I will create professional and eyecatching website for you. I'm
+                I will create professional and eyecatching website for you. I&apos;m
                 ready to fullfill your requirements.
               </p>
             </div>
@@ -70,7 +70,7 @@ const Services = () => {
                 Speed Optimization
               </p>
               <p className="px-3 mt-2 font-medium text-sm group-hover:text-gray-800 duration-300">
-                Speed matters. We optimize your website's performance to deliver
+                Speed matters. We optimize your website&apos;s performance to deliver
                 a fast and smooth user experience, improving user satisfaction
                 and search engine rankings.
               </p>

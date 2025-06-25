@@ -20,6 +20,7 @@ const socialIcons = [
 
 const Socials = () => {
     const [active, setActive] = useState(false);
+    const mode = localStorage.getItem("theme")
     const iconRefs = useRef([]);
     const circleRef = useRef();
     iconRefs.current = [];
@@ -59,15 +60,14 @@ const Socials = () => {
 
     return (
         <div>
-            <div
-                onClick={() => setActive(!active)}
-                className="w-fit h-fit rounded-full bg-lime-300 fixed left-0 right-0 mx-auto top-6 z-10 cursor-pointer scale-95 flex items-center justify-center text-center"
+            <div onClick={() => setActive(!active)}
+                className="w-20 h-fit rounded-bl-full rounded-br-full bg-accent dark:bg-primary fixed left-0 right-0 mx-auto -top-2.5 z-10 cursor-pointer scale-95 flex items-center justify-center text-center"
             >
-                <Hamburger size={20} color="black" toggled={active} toggle={setActive} />
+                <Hamburger size={20} color={mode === "dark" ? "black" : "white"} toggled={active} toggle={setActive} />
             </div>
             <div
                 ref={circleRef}
-                className="w-[220px] h-[220px] rounded-full fixed left-0 right-0 mx-auto -top-24 z-1"
+                className="w-[220px] h-[220px] rounded-full fixed left-0 right-0 mx-auto -top-32 z-1"
             >
                 <div className="w-full h-full bg-transparent rounded-full relative">
                     {socialIcons?.map((item, index) => (
@@ -76,7 +76,7 @@ const Socials = () => {
                             to={item?.slug}
                             target="_blank"
                             ref={(el) => (iconRefs.current[index] = el)}
-                            className={`absolute w-10 h-10 rounded-full text-white bg-black dark:bg-white dark:text-black flex items-center justify-center cursor-pointer rotate-90 opacity-0 ${item?.className}`}
+                            className={`absolute w-10 h-10 rounded-full text-white bg-black dark:bg-white hover:bg-accent dark:text-black hover:bg-primary dark:hover:bg-primary transition-colors duration-300 flex items-center justify-center cursor-pointer rotate-90 opacity-0 ${item?.className}`}
                         >
                             {item?.icon}
                         </Link>

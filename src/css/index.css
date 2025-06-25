@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dhurjati&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -26,6 +26,9 @@
 
 .lobster {
   font-family: "Lobster", sans-serif;
+}
+.outfit {
+  font-family: "Outfit", sans-serif;
 }
 
 html,
@@ -197,6 +200,40 @@ body {
 #logo svg path {
   fill: transparent;
   stroke: #c9f31d;
+  stroke-width: 5;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 280;
+  animation: textAnimation 3s ease-in-out 0.1s 1 forwards;
+}
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  100% {
+    stroke-width: 5;
+    stroke-dashoffset: 0;
+  }
+}
+#logo svg path {
+  fill: transparent;
+  stroke: #c9f31d;
+  stroke-width: 5;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 280;
+  animation: textAnimation 3s ease-in-out 0.1s 1 forwards;
+}
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  100% {
+    stroke-width: 5;
+    stroke-dashoffset: 0;
+  }
+}
+#logo-dark svg path {
+  fill: transparent;
+  stroke: #972FE3;
   stroke-width: 5;
   stroke-dasharray: 250;
   stroke-dashoffset: 280;

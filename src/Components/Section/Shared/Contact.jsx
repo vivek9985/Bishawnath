@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Tittle from "../Tittle/Tittle";
+import Tittle from "../../Tittle/Tittle";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { toast } from "sonner";
+import PrimaryButton from "../../ui/Button/PrimaryButton";
 
 const Contact = () => {
   const form = useRef();
@@ -132,21 +133,12 @@ const Contact = () => {
               name="message"
             />
           </div>
-          <button
+          <div
             data-aos="fade-left"
             data-aos-duration="2000"
-            type="submit"
-            className="inline-flex relative bg-[#c9f31d] rounded-full pl-5 pr-12 py-2 text-lg font-semibold text-gray-700 dark:text-gray-900"
           >
-            <h2>Send</h2>
-            <Player
-              className="absolute right-2 top-2"
-              autoplay
-              loop
-              src="https://lottie.host/a0c2e8fd-3e2c-4f9b-b5de-fbd3fe271ab3/zbEiiBX8Tj.json"
-              style={{ height: "30px", width: "30px" }}
-            ></Player>
-          </button>
+            <PrimaryButton text="Send Message" type="submit" />
+          </div>
         </form>
       </div>
     </section>

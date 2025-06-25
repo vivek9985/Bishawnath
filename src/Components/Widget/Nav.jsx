@@ -24,7 +24,7 @@ const navItems = [
         icon: <IoMail className="text-[28px]" />
     },
     {
-       path: "", name: "Resume", icon: <RiDownloadCloud2Fill className="text-[28px]" />
+        path: "", name: "Resume", icon: <RiDownloadCloud2Fill className="text-[28px]" />
     },
 ];
 
@@ -55,8 +55,6 @@ const Nav = () => {
                 y: translateY,
                 duration: 0.6,
                 ease: "elastic.out(0.5, 1)",
-                // ease: "power4.out",
-                // ease: "back.out(1.7)",
             });
         });
     }, [hoveredIndex]);
@@ -69,8 +67,8 @@ const Nav = () => {
         >
             <div className="absolute left-0 top-0 bottom-0 right-0 m-auto backdrop-blur-xl border border-[#ffffff2e] rounded-2xl z-[-1] duration-500">
                 <div className="w-full h-full bg-[#00000018] dark:bg-[#ffffff18] rounded-2xl relative overflow-hidden">
-                    <div className="w-20 h-20 bg-blue-500 absolute right-0 top-[-50%] rounded-full blur-lg"></div>
-                    <div className="w-20 h-20 bg-blue-500 absolute left-[5%] bottom-[-80%] rounded-full blur-lg"></div>
+                    <div className="w-20 h-20 bg-accent dark:bg-primary absolute right-0 top-[-50%] rounded-full blur-lg"></div>
+                    <div className="w-20 h-20 bg-accent dark:bg-primary absolute left-[5%] bottom-[-80%] rounded-full blur-lg"></div>
                 </div>
             </div>
             {navItems?.map((item, index) => (
@@ -84,15 +82,15 @@ const Nav = () => {
                             navigate(item?.path)
                         }
                     }}
-                    className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-[12px] cursor-pointer group relative"
+                    className="bg-white/70 dark:bg-black/80 backdrop-blur-sm w-[40px] h-[40px] flex items-center justify-center rounded-[12px] cursor-pointer group relative"
                 >
-                    <span className="duration-500 group-hover:scale-125 text-sky-500">
+                    <span className="duration-500 group-hover:scale-125 text-accent dark:text-primary">
                         {pathname === item?.path ? <span>{item?.activeIcon}</span> : <span>{item?.icon}</span>}
                     </span>
                     {pathname === item?.path && (
-                        <div className="w-1 h-1 rounded-full bg-white absolute left-0 right-0 mx-auto -bottom-[6px]" />
+                        <div className="w-1 h-1 rounded-full bg-black/50 dark:bg-white absolute left-0 right-0 mx-auto -bottom-[6px]" />
                     )}
-                    <div className="absolute w-fit px-2 pt-[3px] pb-1 left-0 right-0 mx-auto top-[-25px] text-center rounded-md scale-0 group-hover:scale-100 duration-200">
+                    <div className="absolute w-fit bg-stone-200/50 dark:bg-black/50 px-2 pt-[3px] pb-1 left-0 right-0 mx-auto top-[-25px] text-center rounded-md scale-0 group-hover:scale-100 duration-200">
                         <p className="text-xs font-medium leading-[100%] text-stone-500">{item?.name}</p>
                     </div>
                 </div>

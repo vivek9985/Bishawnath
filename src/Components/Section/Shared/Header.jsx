@@ -5,8 +5,8 @@ import { TbMenu } from "react-icons/tb";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa6";
 import gsap from "gsap";
-import Logo from "./Logo";
-import ThemeChange from "./../ThemeChange/ThemeChange";
+import ThemeChange from "../../Widget/ThemeChange/ThemeChange";
+import Logo from "../../ui/Logo";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -41,11 +41,10 @@ const Header = () => {
 
   return (
     <header className="max-w-[1600px] mx-auto">
-      <div className="w-10/12 mx-auto py-6 flex items-center justify-between">
+      <div className="w-10/12 mx-auto py-6 md:py-8 flex items-center justify-between">
         <Logo />
-
         {/* Desktop Theme Toggle */}
-        <div className="hidden lg:flex items-center justify-center cursor-pointer">
+        <div className="hidden lg:block cursor-pointer">
           <ThemeChange />
         </div>
 
@@ -54,7 +53,7 @@ const Header = () => {
           <ThemeChange />
           <div
             onClick={() => toggleNav(!show)}
-            className="bg-[#c9f31d] w-11 h-11 flex items-center justify-center rounded-full cursor-pointer text-2xl"
+            className="bg-accent dark:bg-primary text-white dark:text-black w-11 h-11 flex items-center justify-center rounded-full cursor-pointer text-2xl"
           >
             {show ? <IoMdClose /> : <TbMenu />}
           </div>
