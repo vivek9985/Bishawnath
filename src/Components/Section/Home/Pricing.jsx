@@ -72,14 +72,14 @@ const Pricing = () => {
                 {!active ?
                     <>
                         <PricingCard variant="fronEnd" type="basic" price={25} className="lg:translate-x-3" />
-                        <PricingCard variant="fronEnd" type="medium" price={50} className="z-10 pt-0" />
+                        <PricingCard variant="fronEnd" type="medium" price={50} className="z-10" />
                         <PricingCard variant="fronEnd" type="premium" price={100} className="lg:-translate-x-3" />
                     </>
                     :
                     <>
                         <PricingCard variant="mern" type="basic" price={200} className="lg:translate-x-3" />
-                        <PricingCard variant="mern" type="medium" price={500} className="z-10 pt-0" />
-                        <PricingCard variant="mern" type="premium" price={1000} className="z-10 pt-0" />
+                        <PricingCard variant="mern" type="medium" price={500} className="z-10" />
+                        <PricingCard variant="mern" type="premium" price={1000} className="lg:-translate-x-3" />
                     </>
                 }
             </div>
