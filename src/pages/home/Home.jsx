@@ -6,7 +6,7 @@ import Experience from './../../Components/Section/Home/Experience';
 import RecentWorks from "../../Components/Section/Home/RecentWorks";
 import Services from './../../Components/Section/Home/Services';
 import Pricing from './../../Components/Section/Home/Pricing';
-import Contact from './../../Components/Section/Shared/Contact';
+import Faq from "../../Components/Section/Shared/Faq";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
       <Services />
       <Ticker />
       <Pricing />
-      <Contact />
+      <Faq />
     </main>
   );
 };

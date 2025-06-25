@@ -60,7 +60,7 @@ const Contact = () => {
     Aos.init();
   });
   return (
-    <section className="max-w-[1600px] mx-auto pt-10 pb-40">
+    <section className="max-w-[1600px] mx-auto pt-10 pb-20">
       <Tittle text={"get in touch"}></Tittle>
       <div className="-mt-4 mb-8 md:mb-2 overflow-hidden">
         <p
