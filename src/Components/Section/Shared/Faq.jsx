@@ -7,7 +7,7 @@ export default function Faq() {
         {
             initialEntered: true,
             title: "What services do you offer?",
-            description: "I provide a range of development services including Frontend Development (React, Next.js), Backend APIs (Node.js, Express), Full-stack Solutions, UI/UX Design, and MongoDB integration. Custom animations and responsive design are also included.",
+            description: "I provide a range of development services including Frontend Development (React, Next.js), Backend APIs (Node.js, Express), Mern-stack Solutions and MongoDB integration. Custom animations and responsive design are also included.",
             type: "services"
         },
         {
