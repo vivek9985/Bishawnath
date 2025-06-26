@@ -53,7 +53,7 @@ export default function Faq() {
             <div className="text-center">
                 <Tittle text={"Faq"}></Tittle>
             </div>
-            <Accordion transition transitionTimeout={300} className="flex flex-col gap-4 md:gap-6 mt-9 md:mt-12">
+            <Accordion transition transitionTimeout={300} className="flex flex-col gap-4 md:gap-5 mt-9 md:mt-12">
                 {faqData?.map(({ title, description, initialEntered }, index) => (
                     <CustomAccordion key={index} header={title} initialEntered={initialEntered}>
                         {description}

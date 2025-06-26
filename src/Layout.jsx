@@ -24,7 +24,7 @@ const Layout = () => {
   return (
     <main className="relative">
       {/* <CustomCursor /> */}
-      <div className="bg-[#fffaf1] dark:bg-[#161616] transition-all duration-300">
+      <div className="bg-light dark:bg-secondary transition-all duration-300 pt-20">
         <Header />
         <Outlet />
         <Footer />

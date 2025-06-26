@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <header className="max-w-[1600px] mx-auto">
+    <header className="max-w-[1600px] mx-auto fixed top-0 left-0 right-0 z-20">
       <div className="w-10/12 mx-auto py-6 md:py-8 flex items-center justify-between">
         <Logo />
         {/* Desktop Theme Toggle */}
@@ -106,7 +106,6 @@ const Header = () => {
         </div>
       </div>
     </header>
-
   );
 };
 

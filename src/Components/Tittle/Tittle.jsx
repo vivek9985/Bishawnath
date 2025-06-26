@@ -11,13 +11,13 @@ const Tittle = ({ text }) => {
   return (
     <section>
       <div className="overflow-hidden">
-        <h1
+        <h2
           data-aos="fade-up"
           data-aos-duration="800"
-          className="text-center font-bold text-transparent dhurjati text-5xl mb-6 uppercase section-title"
+          className="text-center font-medium text-transparent dark:text-primary lobster text-5xl mb-6 capitalize section-title"
         >
           {text}
-        </h1>
+        </h2>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 const Ticker = () => {
   const star = (
     <svg
-      className="dark:invert"
+      className="grayscale-0 dark:grayscale invert dark:invert-0"
       width="30"
       height="30"
       viewBox="0 0 37 35"
@@ -15,145 +15,9 @@ const Ticker = () => {
     </svg>
   );
   return (
-    <section className="mt-0 mb-32 overflow-x-hidden py-2">
-      <div className="w-[110%] mx-auto -translate-x-2 bg-black dark:bg-gray-200 -mb-[85px]">
-        <div className="py-4 flex items-center gap-12 whitespace-nowrap ticker-1">
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to html
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to bootstrap
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to tailwind
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to React js
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to Next js
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Landing Page
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              E-commerce Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Business Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Agency Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Portfolio Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Personal Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to html
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to bootstrap
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to tailwind
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to React js
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Figma to Next js
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Landing Page
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              E-commerce Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Business Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Agency Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Portfolio Website
-            </h2>
-            {star}
-          </div>
-          <div className="flex items-center gap-12">
-            <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
-              Personal Website
-            </h2>
-            {star}
-          </div>
-        </div>
-      </div>
-      <div className="w-[110%] mx-auto -translate-x-2 mt-28 bg-black dark:bg-gray-200">
-        <div className="py-4 flex items-center gap-12 whitespace-nowrap ticker-2">
+    <section className="my-32 overflow-x-hidden">
+      <div className="w-[110%] mx-auto -translate-x-2 bg-accent dark:bg-primary">
+        <div className="py-5 flex items-center gap-12 whitespace-nowrap ticker-1">
           <div className="flex items-center gap-12">
             <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">
               Figma to html

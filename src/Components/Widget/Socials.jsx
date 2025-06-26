@@ -61,13 +61,13 @@ const Socials = () => {
     return (
         <div>
             <div onClick={() => setActive(!active)}
-                className="w-20 h-fit rounded-bl-full rounded-br-full bg-accent dark:bg-primary fixed left-0 right-0 mx-auto -top-2.5 z-10 cursor-pointer scale-95 flex items-center justify-center text-center"
+                className="w-20 h-fit rounded-bl-full rounded-br-full bg-accent dark:bg-primary fixed left-0 right-0 mx-auto -top-2.5 z-20 cursor-pointer scale-95 flex items-center justify-center text-center"
             >
                 <Hamburger size={20} color={mode === "dark" ? "black" : "white"} toggled={active} toggle={setActive} />
             </div>
             <div
                 ref={circleRef}
-                className="w-[220px] h-[220px] rounded-full fixed left-0 right-0 mx-auto -top-32 z-1"
+                className="w-[220px] h-[220px] rounded-full fixed left-0 right-0 mx-auto -top-32 z-10"
             >
                 <div className="w-full h-full bg-transparent rounded-full relative">
                     {socialIcons?.map((item, index) => (
@@ -76,7 +76,7 @@ const Socials = () => {
                             to={item?.slug}
                             target="_blank"
                             ref={(el) => (iconRefs.current[index] = el)}
-                            className={`absolute w-10 h-10 rounded-full text-white bg-black dark:bg-white hover:bg-accent dark:text-black hover:bg-primary dark:hover:bg-primary transition-colors duration-300 flex items-center justify-center cursor-pointer rotate-90 opacity-0 ${item?.className}`}
+                            className={`absolute w-10 h-10 rounded-full text-white bg-black dark:bg-white hover:bg-accent dark:text-black dark:hover:bg-primary transition-colors duration-300 flex items-center justify-center cursor-pointer rotate-90 opacity-0 ${item?.className}`}
                         >
                             {item?.icon}
                         </Link>

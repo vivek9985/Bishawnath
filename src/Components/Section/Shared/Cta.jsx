@@ -1,5 +1,4 @@
-import Bg from "../../../assets/cta-bg.mp4"
-import BgLight from "../../../assets/cta-bg-light.mp4"
+import Bg from "../../../assets/cta-bg-light.mp4"
 import PrimaryButton from './../../ui/Button/PrimaryButton';
 import { Link } from "react-router-dom";
 
@@ -8,21 +7,13 @@ const Cta = () => {
         <section className="pb-20 md:pb-28 lg:pb-32 xl:pb-40">
             <div className="w-11/12 sm:w-9/12 md:w-[715px] lg:w-[900px] xl:w-[1200px] h-[330px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] mx-auto rounded-2xl sm:rounded-3xl md:rounded-[50px] bg-stone-300 dark:bg-stone-700 overflow-hidden relative">
                 <video
-                    className="w-full h-auto aspect-video hidden md:dark:block invert"
-                    loop
-                    muted
-                    autoPlay
-                >
-                    <source src={Bg} type="video/mp4" />
-                </video>
-                <video
-                    className="w-full h-auto aspect-video hidden md:block dark:hidden"
+                    className="w-full h-auto aspect-video hidden md:block invert-0 dark:invert"
                     loop
                     muted
                     autoPlay
                 >
                     <source
-                        src={BgLight}
+                        src={Bg}
                         type="video/mp4"
                     />
                 </video>

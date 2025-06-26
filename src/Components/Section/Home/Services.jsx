@@ -1,85 +1,89 @@
-import { FaGlobeAmericas } from "react-icons/fa";
-import { MdWeb } from "react-icons/md";
-import Tittle from "../../Tittle/Tittle";
-import { IoIosRocket } from "react-icons/io";
-import "aos/dist/aos.css";
-import Aos from "aos";
 import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Tittle from "../../Tittle/Tittle";
+
+const servicesData = [
+  {
+    icon: "🎨",
+    title: "Frontend Development",
+    description:
+      "Craft responsive, accessible, and stunning user interfaces using React, Tailwind CSS, and modern component patterns.",
+    color: "text-pink-500",
+    animation: "fade-up",
+  },
+  {
+    icon: "⚙️",
+    title: "API Integration & Backend Logic",
+    description:
+      "Design and integrate robust RESTful APIs, manage database schemas, and implement secure authentication systems.",
+    color: "text-green-500",
+    animation: "fade-up",
+  },
+  {
+    icon: "💻",
+    title: "Full-Stack Web Development",
+    description:
+      "Build complete web applications using MongoDB, Express, React, and Node.js — from backend APIs to frontend UIs.",
+    color: "text-blue-500",
+    animation: "fade-up",
+  },
+  {
+    icon: "🔐",
+    title: "Authentication & Authorization",
+    description:
+      "Implement secure login systems using JWT and role-based access control across your full-stack apps.",
+    color: "text-red-500",
+    animation: "fade-up",
+  },
+  {
+    icon: "📦",
+    title: "Database Design & Optimization",
+    description:
+      "Model efficient MongoDB schemas and optimize queries for scalability and performance.",
+    color: "text-purple-500",
+    animation: "fade-up",
+  },
+  {
+    icon: "🚀",
+    title: "Deployment & Optimization",
+    description:
+      "Deploy apps on Vercel, Netlify, domain linking, and performance tuning.",
+    color: "text-yellow-500",
+    animation: "fade-up",
+  },
+];
 
 const Services = () => {
   useEffect(() => {
-    Aos.init();
-  });
+    Aos.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section className="w-9/12 py-20 mx-auto">
-      <Tittle text={"Services"}></Tittle>
-      <div className="flex flex-wrap gap-6 items-center justify-center mt-20">
-        {/* one */}
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1200"
-          className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group"
-        >
-          <div className="clip-container w-full h-full bg-[#f3361d] flex items-center justify-center transition-all duration-700"></div>
-          <div className="clip-card bg-transparent absolute">
-            <div className="text-center text-stone-500 dark:text-stone-400">
-              <p className="text-xl font-medium text-stone-900 dark:text-stone-200 group-hover:text-gray-800 duration-300">
-                Create Website
-              </p>
-              <p className="px-3 mt-2 font-medium text-sm group-hover:text-gray-800 duration-300">
-                I will create professional and eyecatching website for you. I&apos;m
-                ready to fullfill your requirements.
-              </p>
+    <section className="w-11/12 max-w-7xl pt-20 pb-10 mx-auto">
+      <Tittle text="Services" />
+      <p className="text-center outfit text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 md:mb-16">
+        As a MERN Stack Developer, I craft full-stack web solutions that are fast, responsive, and scalable. Here&apos;s what I can do for you.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-5 xl:gap-7 outfit">
+        {servicesData.map((service, i) => (
+          <div
+            key={i}
+            data-aos={service?.animation}
+            className="bg-gradient-to-b from-[#d9d7d7] to-light dark:from-[#272626] dark:to-secondary p-8 rounded-3xl hover:shadow-2xl transform hover:translate-y-2 transition-all duration-500"
+          >
+            <div className={`text-5xl mb-8 ${service?.color}`}>
+              {service?.icon}
             </div>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+              {service?.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              {service?.description}
+            </p>
           </div>
-          <span className="absolute right-3 top-3 p-1">
-            <FaGlobeAmericas className="text-gray-900 dark:text-gray-100"></FaGlobeAmericas>
-          </span>
-        </div>
-        {/* two */}
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1700"
-          className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
-          <div className="clip-container w-full h-full bg-[#a047e9] flex items-center justify-center transition-all duration-700"></div>
-          <div className="clip-card bg-transparent absolute">
-            <div className="text-center text-stone-500 dark:text-stone-400">
-              <p className="text-xl font-medium text-stone-900 dark:text-stone-200 group-hover:text-gray-950 duration-300">
-                Responsive Design
-              </p>
-              <p className="px-3 mt-2 font-medium text-sm group-hover:text-gray-800 duration-300">
-                Ensure a seamless user experience across all devices with our
-                responsive web design services. Your website will look stunning
-                and function flawlessly on desktops, tablets, and smartphones.
-              </p>
-            </div>
-          </div>
-          <span className="absolute right-3 top-3 p-1">
-            <MdWeb className="text-gray-900 dark:text-gray-100"></MdWeb>
-          </span>
-        </div>
-        {/* three */}
-        <div
-          data-aos="fade-up"
-          data-aos-duration="2200"
-          className="clip-section w-[300px] h-[200px] rounded-3xl overflow-hidden flex items-center justify-center bg-[#ffffff] border dark:bg-black dark:border-stone-700 relative group">
-          <div className="clip-container w-full h-full bg-[#7df31d] flex items-center justify-center transition-all duration-700"></div>
-          <div className="clip-card bg-transparent absolute">
-            <div className="text-center text-stone-500 dark:text-stone-400">
-              <p className="text-xl font-medium text-stone-900 dark:text-stone-200 group-hover:text-gray-950 duration-300">
-                Speed Optimization
-              </p>
-              <p className="px-3 mt-2 font-medium text-sm group-hover:text-gray-800 duration-300">
-                Speed matters. We optimize your website&apos;s performance to deliver
-                a fast and smooth user experience, improving user satisfaction
-                and search engine rankings.
-              </p>
-            </div>
-          </div>
-          <span className="absolute right-3 top-3 p-1">
-            <IoIosRocket className="text-gray-900 dark:text-gray-100"></IoIosRocket>
-          </span>
-        </div>
+        ))}
       </div>
     </section>
   );

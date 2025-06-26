@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const RecentWorks = () => {
     return (
-        <div className="max-w-[1600px] mx-auto mt-10 pb-20">
+        <div className="max-w-[1600px] mx-auto py-10">
             <div className="mx-auto flex justify-center text-center">
                 <Tittle text={"Recent Works"}></Tittle>
                 <sup className="mt-3 ml-1 dhurjati font-bold text-[14px] text-gray-600 dark:text-gray-400">
@@ -85,7 +85,7 @@ const RecentWorks = () => {
                         </div>
                     </a>
                 </div>
-                <Link to="/project" className="mt-12 block w-fit mx-auto">
+                <Link to="/project" className="mt-12 lg:mt-20 block w-fit mx-auto">
                     <PrimaryButton text="All Projects" />
                 </Link>
             </div>

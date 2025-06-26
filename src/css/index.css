@@ -132,13 +132,6 @@ body {
   }
 }
 
-.clip-container {
-  clip-path: circle(8% at 92% 12%);
-}
-.clip-section:hover .clip-container {
-  clip-path: circle(100%);
-}
-
 .section-title {
   color: transparent;
   -webkit-background-clip: text;
@@ -161,18 +154,6 @@ body {
   }
   100% {
     transform: translateX(-4000px);
-  }
-}
-.ticker-2 {
-  animation: ticker-slider-2 100s linear infinite;
-}
-
-@keyframes ticker-slider-2 {
-  0% {
-    transform: translateX(-4000px);
-  }
-  100% {
-    transform: translateX(0px);
   }
 }
 
@@ -233,7 +214,7 @@ body {
 }
 #logo-dark svg path {
   fill: transparent;
-  stroke: #972FE3;
+  stroke: #972fe3;
   stroke-width: 5;
   stroke-dasharray: 250;
   stroke-dashoffset: 280;
@@ -248,3 +229,4 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
