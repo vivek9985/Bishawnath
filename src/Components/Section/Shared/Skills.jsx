@@ -40,15 +40,15 @@ const Skills = () => {
   return (
     <section className="max-w-[1600px] mx-auto my-20">
       <Tittle text={"skills"}></Tittle>
-      <div className="w-11/12 md:w-8/12 mx-auto mt-10">
+      <div className="w-11/12 md:w-8/12 mx-auto mt-10 md:mt-12">
         <div className="flex items-center justify-center flex-wrap gap-3">
           {skills.map((item, index) => (
             <div
               key={index}
-              className="flex items-center justify-center gap-3 px-5 py-2.5 rounded-md bg-[#00000030] dark:bg-[#ffffff10] skill"
+              className="flex items-center justify-center gap-3.5 px-5 md:px-6 py-2.5 rounded-lg bg-stone-200 dark:bg-[#ffffff10] skill"
             >
               <img
-                className="w-6 h-6"
+                className="w-6 h-6 rounded-md object-cover object-center"
                 src={item.icon}
                 alt={`${item.name} logo`}
               />

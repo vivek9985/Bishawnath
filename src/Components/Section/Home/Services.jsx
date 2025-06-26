@@ -62,11 +62,11 @@ const Services = () => {
   return (
     <section className="w-11/12 max-w-7xl pt-20 pb-10 mx-auto">
       <Tittle text="Services" />
-      <p className="text-center outfit text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 md:mb-16">
+      {/* <p className="text-center outfit text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 md:mb-16">
         As a MERN Stack Developer, I craft full-stack web solutions that are fast, responsive, and scalable. Here&apos;s what I can do for you.
-      </p>
+      </p> */}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-5 xl:gap-7 outfit">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 lg:gap-5 xl:gap-7 outfit mt-10 md:mt-12">
         {servicesData.map((service, i) => (
           <div
             key={i}
@@ -76,7 +76,7 @@ const Services = () => {
             <div className={`text-5xl mb-8 ${service?.color}`}>
               {service?.icon}
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+            <h3 className="text-xl font-semibold text-black dark:text-white mb-2">
               {service?.title}
             </h3>
             <p className="text-gray-600 dark:text-gray-300">

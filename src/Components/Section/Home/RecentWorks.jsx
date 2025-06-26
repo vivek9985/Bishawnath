@@ -1,95 +1,68 @@
-import spectre from "../../../assets/works/spectre.png"
-import imash from "../../../assets/works/imash.png"
-import monks from "../../../assets/works/monks.png"
-import { MdOutlineArrowForward } from "react-icons/md";
+import monks from "../../../assets/works/monks.webp"
+import monksTwo from "../../../assets/works/monks-2.webp"
+import monksThree from "../../../assets/works/monks-3.webp"
+import spectre from "../../../assets/works/spectre.webp"
+import spectreTwo from "../../../assets/works/spectre-2.webp"
+import spectreThree from "../../../assets/works/spectre-3.webp"
+import imash from "../../../assets/works/imash.webp"
+import imashTwo from "../../../assets/works/imash-2.webp"
+import imashThree from "../../../assets/works/imash-3.webp"
 import Tittle from "../../Tittle/Tittle";
 import PrimaryButton from "../../ui/Button/PrimaryButton";
 import { Link } from "react-router-dom";
+import ProjectCard from "../../Cards/ProjectCard";
 
+const projectsData = [
+    {
+        name: "MonksWizard",
+        liveLink: "https://monkswizard.netlify.app/",
+        imgOne: monks,
+        imgTwo: monksTwo,
+        imgThree: monksThree,
+        technologies: ["tailwind", "typescript", "react js", "next js", "framer motion"],
+    },
+    {
+        name: "Spectre",
+        liveLink: "https://spectre-one.vercel.app/",
+        imgOne: spectre,
+        imgTwo: spectreTwo,
+        imgThree: spectreThree,
+        technologies: ["tailwind", "typescript", "react js", "next js", "gsap"],
+    },
+    {
+        name: "imash",
+        liveLink: "https://imash.vercel.app/",
+        imgOne: imash,
+        imgTwo: imashTwo,
+        imgThree: imashThree,
+        technologies: ["tailwind", "javascript"],
+    },
+];
 
 
 const RecentWorks = () => {
     return (
-        <div className="max-w-[1600px] mx-auto py-10">
-            <div className="mx-auto flex justify-center text-center">
+        <div className="lg:max-w-[1000px] xl:max-w-[1300px] mx-auto py-10">
+            <div className="mx-auto">
                 <Tittle text={"Recent Works"}></Tittle>
-                <sup className="mt-3 ml-1 dhurjati font-bold text-[14px] text-gray-600 dark:text-gray-400">
-                    06
-                </sup>
             </div>
-            <div className="w-10/12 mx-auto mt-7 md:mt-10">
-                <div className="w-full grid md:grid-cols-2 xl:grid-cols-3 gap-6 mx-auto">
-                    <a href="https://spectre-one.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
-                        <div>
-                            <img className="w-[100%] h-[100%] rounded-xl" src={spectre} alt="" />
-                        </div>
-                        <div className="mt-2 p-3 flex items-center justify-between">
-                            <div className="w-10/12">
-                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Spectre</h3>
-                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
-                                    <li>Tailwind</li>
-                                    <li>Next Js</li>
-                                    <li>Typescript</li>
-                                    <li>Gsap</li>
-                                </ul>
-                            </div>
-                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
-                                <div className="flex items-center justify-center gap-4 -rotate-45">
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://monkswizard.netlify.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
-                        <div>
-                            <img className="w-[100%] h-[100%] rounded-xl" src={monks} alt="" />
-                        </div>
-                        <div className="mt-2 p-3 flex items-center justify-between">
-                            <div className="w-10/12">
-                                <h3 className="text-xl sm:text-2xl font-semibold text-white">Monks Wizard</h3>
-                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
-                                    <li>Tailwind</li>
-                                    <li>Next Js</li>
-                                    <li>Typescript</li>
-                                    <li>Framer motion</li>
-                                </ul>
-                            </div>
-                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
-                                <div className="flex items-center justify-center gap-4 -rotate-45">
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://imash.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-full p-2.5 sm:p-4 border-[1px] border-[#a258ec94] overflow-hidden rounded-xl works-bg group">
-                        <div>
-                            <img className="w-[100%] h-[100%] rounded-xl" src={imash} alt="" />
-                        </div>
-                        <div className="mt-2 p-3 flex items-center justify-between">
-                            <div className="w-10/12">
-                                <h3 className="text-xl sm:text-2xl font-semibold text-white">imash</h3>
-                                <ul className="mt-1 sm:mt-2 flex items-center flex-wrap gap-y-0.5 gap-2 text-stone-400">
-                                    <li>Tailwind</li>
-                                    <li>Javascript</li>
-                                    <li>Aos</li>
-                                </ul>
-                            </div>
-                            <div className="w-10 lg:w-14 h-10 lg:h-14 rounded-full overflow-hidden bg-purple-600 group-hover:bg-white duration-500 flex items-center justify-center">
-                                <div className="flex items-center justify-center gap-4 -rotate-45">
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                    <MdOutlineArrowForward className="text-3xl text-white group-hover:text-black -translate-x-6 group-hover:translate-x-6 duration-300" />
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <Link to="/project" className="mt-12 lg:mt-20 block w-fit mx-auto">
-                    <PrimaryButton text="All Projects" />
-                </Link>
+            <div className="flex flex-wrap justify-center sm:gap-4 md:gap-5 xl:gap-6 mt-14">
+                {projectsData?.map((project, index) => (
+                    <ProjectCard
+                        key={index}
+                        name={project.name}
+                        liveLink={project.liveLink}
+                        imgOne={project.imgOne}
+                        imgTwo={project.imgTwo}
+                        imgThree={project.imgThree}
+                        technologies={project.technologies}
+                    />
+                ))}
             </div>
 
+            <Link to="/project" className="mt-12 lg:mt-20 block w-fit mx-auto">
+                <PrimaryButton text="All Projects" />
+            </Link>
         </div>
     );
 };

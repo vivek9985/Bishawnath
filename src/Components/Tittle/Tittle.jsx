@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-// eslint-disable-next-line react/prop-types
 const Tittle = ({ text }) => {
   useEffect(() => {
     Aos.init();
@@ -14,7 +14,7 @@ const Tittle = ({ text }) => {
         <h2
           data-aos="fade-up"
           data-aos-duration="800"
-          className="text-center font-medium text-transparent dark:text-primary lobster text-5xl mb-6 capitalize section-title"
+          className="text-center font-medium text-transparent dark:text-primary lobster text-3xl md:text-4xl lg:text-5xl mb-6 capitalize section-title"
         >
           {text}
         </h2>

@@ -61,13 +61,13 @@ const Socials = () => {
     return (
         <div>
             <div onClick={() => setActive(!active)}
-                className="w-20 h-fit rounded-bl-full rounded-br-full bg-accent dark:bg-primary fixed left-0 right-0 mx-auto -top-2.5 z-20 cursor-pointer scale-95 flex items-center justify-center text-center"
+                className="w-20 h-fit rounded-bl-full rounded-br-full bg-accent dark:bg-primary fixed left-0 right-0 mx-auto -top-2.5 z-40 cursor-pointer scale-95 flex items-center justify-center text-center"
             >
                 <Hamburger size={20} color={mode === "dark" ? "black" : "white"} toggled={active} toggle={setActive} />
             </div>
             <div
                 ref={circleRef}
-                className="w-[220px] h-[220px] rounded-full fixed left-0 right-0 mx-auto -top-32 z-10"
+                className="w-[220px] h-[220px] rounded-full fixed left-0 right-0 mx-auto -top-32 z-30"
             >
                 <div className="w-full h-full bg-transparent rounded-full relative">
                     {socialIcons?.map((item, index) => (
