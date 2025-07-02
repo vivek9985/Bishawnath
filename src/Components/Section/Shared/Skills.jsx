@@ -1,61 +1,80 @@
+import { useRef } from "react";
 import Tittle from "../../Tittle/Tittle";
-import "aos/dist/aos.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import Html from "../../../assets/icons/html.svg";
+import Css from "../../../assets/icons/css.svg";
+import Sass from "../../../assets/icons/sass.svg";
+import Tailwind from "../../../assets/icons/tailwind.svg";
+import Javascript from "../../../assets/icons/js.svg";
+import Typescript from "../../../assets/icons/ts.svg";
+import Gsap from "../../../assets/icons/gsap.png";
+import ReactIcon from "../../../assets/icons/react.svg";
+import Next from "../../../assets/icons/next.svg";
+import Node from "../../../assets/icons/node.svg";
+import Express from "../../../assets/icons/express.svg";
+import Mongodb from "../../../assets/icons/mongodb.svg";
+import Mongoose from "../../../assets/icons/mongoose.svg";
+
 gsap.registerPlugin(ScrollTrigger);
 
+const skills = [
+  { name: "HTML", icon: Html },
+  { name: "CSS", icon: Css },
+  { name: "Sass", icon: Sass },
+  { name: "Tailwind", icon: Tailwind },
+  { name: "JavaScript", icon: Javascript },
+  { name: "TypeScript", icon: Typescript },
+  { name: "GSAP", icon: Gsap },
+  { name: "React JS", icon: ReactIcon },
+  { name: "Next JS", icon: Next },
+  { name: "Node JS", icon: Node },
+  { name: "Express JS", icon: Express },
+  { name: "MongoDB", icon: Mongodb },
+  { name: "Mongoose", icon: Mongoose },
+];
+
 const Skills = () => {
-  const skills = [
-    { id: 1, name: "HTML", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/HTML.svg" },
-    { id: 2, name: "CSS", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/CSS.svg" },
-    { id: 3, name: "SCSS", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" },
-    { id: 4, name: "Tailwind", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/TailwindCSS.svg" },
-    { id: 5, name: "Javascript", icon: "https://raw.githubusercontent.com/vivek9985/vivek9985/68f9b4dc93bb48e37f7b869a7579a68d530a5ff2/JavaScript.svg" },
-    { id: 6, name: "Typescript", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" },
-    { id: 7, name: "Gsap", icon: "https://assets.codepen.io/16327/internal/avatars/users/default.png?fit=crop&format=auto&height=256&version=1697554632&width=256" },
-    { id: 8, name: "React", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" },
-    { id: 9, name: "Next Js", icon: "https://www.robiulhasan.dev/images/icons/next-js.png" },
-    { id: 10, name: "Node Js", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" },
-    { id: 11, name: "Express", icon: "https://www.robiulhasan.dev/images/icons/express.png" },
-    { id: 12, name: "MongoDB", icon: "https://www.robiulhasan.dev/images/icons/mongodb.png" },
-    { id: 13, name: "Mongoose", icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongoose/mongoose.png" },
-  ];
+  const containerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.from(".skill", {
+    gsap.from(".skill-item", {
       scrollTrigger: {
-        trigger: ".skill",
-        start: "top 90%",
-        end: "bottom 30%",
+        trigger: containerRef.current,
+        start: "top 70%",
+        end: "bottom 20%",
         scrub: true,
       },
-      y: 100,
       opacity: 0,
-      duration: 2,
-      stagger: 0.2
-    })
-  })
+      y: 80,
+      stagger: 0.2,
+      duration: 1,
+      ease: "power3.out",
+    });
+  }, []);
+
   return (
-    <section className="max-w-[1600px] mx-auto my-20">
-      <Tittle text={"skills"}></Tittle>
+    <section ref={containerRef} className="max-w-[1600px] mx-auto my-20">
+      <Tittle text="skills" />
       <div className="w-11/12 md:w-8/12 mx-auto mt-10 md:mt-12">
-        <div className="flex items-center justify-center flex-wrap gap-3">
-          {skills.map((item, index) => (
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex items-center justify-center gap-3.5 px-5 md:px-6 py-2.5 rounded-lg bg-stone-200 dark:bg-[#ffffff10] skill"
+              className="skill-item flex items-center gap-3 px-5 py-2.5 rounded-lg bg-stone-200 dark:bg-[#ffffff10]"
             >
               <img
-                className="w-6 h-6 rounded-md object-cover object-center"
-                src={item.icon}
-                alt={`${item.name} logo`}
+                src={skill.icon}
+                alt={`${skill.name} logo`}
+                className="w-6 h-6 object-cover rounded-md"
               />
-              <span className="text-sm font-medium text-stone-900 dark:text-white">{item.name}</span>
+              <span className="text-sm font-medium text-stone-900 dark:text-white">
+                {skill.name}
+              </span>
             </div>
           ))}
-
         </div>
       </div>
     </section>
