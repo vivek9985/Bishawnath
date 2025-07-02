@@ -1,4 +1,5 @@
 import moment from "moment";
+import { useEffect, useState } from "react";
 import { FaBehance, FaDribbble, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -11,7 +12,15 @@ const socialIcons = [
 ];
 
 const Footer = () => {
-  const time = moment().format("LT");
+  const [time, setTime] = useState(moment().format("HH:mm:ss"));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(moment().format("HH:mm:ss"));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="w-full bg-accent/10 dark:bg-[#1d1d1d] pb-10">
       <div className="max-w-[1600px] mx-auto">

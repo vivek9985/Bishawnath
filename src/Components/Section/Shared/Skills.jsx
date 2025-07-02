@@ -60,9 +60,9 @@ const Skills = () => {
       <Tittle text="skills" />
       <div className="w-11/12 md:w-8/12 mx-auto mt-10 md:mt-12">
         <div className="flex flex-wrap items-center justify-center gap-4">
-          {skills.map((skill, index) => (
+          {skills.map((skill, i) => (
             <div
-              key={index}
+              key={i}
               className="skill-item flex items-center gap-3 px-5 py-2.5 rounded-lg bg-stone-200 dark:bg-[#ffffff10]"
             >
               <img
