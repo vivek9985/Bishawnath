@@ -46,6 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       toastOptions={{
         style: {
           background: "#c9f31d",
+          borderColor: "#c9f31d",
           width: "auto",
         },
         classNames: {
