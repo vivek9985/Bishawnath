@@ -16,14 +16,14 @@ const Contact = () => {
     const email = fm.user_email.value;
     const message = fm.message.value;
     if (name === "") {
-      toast.error("Please provide your name !", {
+      toast.warning("Please provide your name !", {
         action: {
           label: <p className="pb-0.5">Close</p>,
           onClick: () => console.log("Close"),
         },
       });
     } else if (email === "") {
-      toast.error("Please provide your email !");
+      toast.warning("Please provide your email !");
     } else if (message === "") {
       toast.error("Please provide a message !");
     } else {
@@ -62,11 +62,11 @@ const Contact = () => {
   return (
     <section className="max-w-[1600px] mx-auto pt-10 pb-20">
       <Tittle text={"get in touch"}></Tittle>
-      <div className="-mt-4 mb-8 md:mb-2 overflow-hidden">
+      <div className="mt-1.5 mb-8 md:mb-2 overflow-hidden">
         <p
           data-aos="fade-up"
           data-aos-duration="1400"
-          className="text-center font-medium dark:text-stone-200"
+          className="text-center font-medium dark:text-stone-200 outfit"
         >
           Feel free to contact me
         </p>
