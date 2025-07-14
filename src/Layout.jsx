@@ -14,7 +14,7 @@ const Layout = () => {
     new LocomotiveScroll();
   })
   useGSAP(() => {
-    gsap.from("#socials", {
+    gsap.from("#nav", {
       y: 250,
       duration: 1,
       delay: 3,

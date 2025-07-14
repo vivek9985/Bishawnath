@@ -61,7 +61,7 @@ const Nav = () => {
 
     return (
         <div
-            id="socials"
+            id="nav"
             className={`w-fit h-[60px] rounded-2xl flex items-end justify-center fixed left-0 right-0 bottom-10 mx-auto z-10 px-2.5 pb-[11px] ${hoveredIndex !== null ? "gap-2" : "gap-1.5"
                 }`}
         >
