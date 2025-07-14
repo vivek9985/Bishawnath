@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Tittle from "./../../Components/Tittle/Tittle";
 
 const Package = () => {

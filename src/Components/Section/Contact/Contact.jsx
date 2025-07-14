@@ -16,14 +16,14 @@ const Contact = () => {
     const email = fm.user_email.value;
     const message = fm.message.value;
     if (name === "") {
-      toast.warning("Please provide your name !", {
+      toast.error("Please provide your name !", {
         action: {
           label: <p className="pb-0.5">Close</p>,
           onClick: () => console.log("Close"),
         },
       });
     } else if (email === "") {
-      toast.warning("Please provide your email !");
+      toast.error("Please provide your email !");
     } else if (message === "") {
       toast.error("Please provide a message !");
     } else {

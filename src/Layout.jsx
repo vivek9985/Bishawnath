@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 // import CustomCursor from './Components/CustomCursor/CustomCursor';
 import Header from './Components/Section/Shared/Header';
 import Footer from './Components/Section/Shared/Footer';
+import Message from "./Components/Widget/Message";
 
 const Layout = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const Layout = () => {
         <Outlet />
         <Footer />
         <Nav />
+        <Message />
       </div>
     </main>
   );
