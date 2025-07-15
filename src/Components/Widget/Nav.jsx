@@ -29,6 +29,7 @@ const navItems = [
 ];
 
 const Nav = () => {
+    const navRef = useRef([]);
     const { pathname } = useLocation();
     const navigate = useNavigate();
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -53,16 +54,22 @@ const Nav = () => {
                 width: size,
                 height: size,
                 y: translateY,
-                duration: 0.6,
-                ease: "elastic.out(0.5, 1)",
+                duration: 0.5,
+                ease: "elastic.out(0.6, 1)",
             });
+        });
+        gsap.to(navRef.current, {
+            bottom: "40px",
+            duration: 1,
+            delay: 3,
+            ease: "elastic.out(1,0.7)",
         });
     }, [hoveredIndex]);
 
     return (
         <div
-            id="nav"
-            className={`w-fit h-[60px] rounded-2xl flex items-end justify-center fixed left-0 right-0 bottom-10 mx-auto z-10 px-2.5 pb-[11px] ${hoveredIndex !== null ? "gap-2" : "gap-1.5"
+            ref={navRef}
+            className={`w-fit h-[57px] rounded-2xl flex items-end justify-center fixed left-0 right-0 -bottom-20 mx-auto z-10 px-2.5 pb-[9px] ${hoveredIndex !== null ? "gap-0" : "gap-1"
                 }`}
         >
             <div className="absolute left-0 top-0 bottom-0 right-0 m-auto backdrop-blur-xl border border-[#ffffff2e] rounded-2xl z-[-1] duration-500">
@@ -82,7 +89,7 @@ const Nav = () => {
                             navigate(item?.path)
                         }
                     }}
-                    className="bg-white/70 dark:bg-black/80 backdrop-blur-sm w-[40px] h-[40px] flex items-center justify-center rounded-[12px] cursor-pointer group relative"
+                    className="bg-white/70 dark:bg-black/80 backdrop-blur-sm w-[40px] h-[40px] flex items-center justify-center rounded-xl hover:rounded-2xl cursor-pointer group relative"
                 >
                     <span className="duration-500 group-hover:scale-125 text-accent dark:text-primary">
                         {pathname === item?.path ? <span>{item?.activeIcon}</span> : <span>{item?.icon}</span>}
