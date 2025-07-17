@@ -110,7 +110,7 @@ body {
 .text-animation {
   background-image: url(../assets/13.jpg);
   -webkit-background-clip: text;
-  animation: text-anim 300s linear infinite;
+  animation: text-anim 600s linear infinite;
 }
 
 @keyframes text-anim {
