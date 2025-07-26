@@ -1,6 +1,6 @@
-import monks from "../../../assets/works/monks.webp"
-import monksTwo from "../../../assets/works/monks-2.webp"
-import monksThree from "../../../assets/works/monks-3.webp"
+// import monks from "../../../assets/works/monks.webp"
+// import monksTwo from "../../../assets/works/monks-2.webp"
+// import monksThree from "../../../assets/works/monks-3.webp"
 import spectre from "../../../assets/works/spectre.webp"
 import spectreTwo from "../../../assets/works/spectre-2.webp"
 import spectreThree from "../../../assets/works/spectre-3.webp"
@@ -13,14 +13,14 @@ import { Link } from "react-router-dom";
 import ProjectCard from "../../Cards/ProjectCard";
 
 const projectsData = [
-    {
-        name: "MonksWizard",
-        liveLink: "https://monkswizard.netlify.app/",
-        imgOne: monks,
-        imgTwo: monksTwo,
-        imgThree: monksThree,
-        technologies: ["tailwind", "typescript", "react js", "next js", "framer motion"],
-    },
+    // {
+    //     name: "MonksWizard",
+    //     liveLink: "https://monkswizard.netlify.app/",
+    //     imgOne: monks,
+    //     imgTwo: monksTwo,
+    //     imgThree: monksThree,
+    //     technologies: ["tailwind", "typescript", "react js", "next js", "framer motion"],
+    // },
     {
         name: "Spectre",
         liveLink: "https://spectre-one.vercel.app/",

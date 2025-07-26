@@ -19,7 +19,9 @@ const Layout = () => {
         <Header />
         <Outlet />
         <Footer />
-        <Nav />
+        <div className="hidden lg:block">
+          <Nav />
+        </div>
         <Message />
       </div>
     </main>

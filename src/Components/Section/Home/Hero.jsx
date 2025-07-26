@@ -59,7 +59,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] xl:pt-[90px] 2xl:pt-[150px] pb-16 2xl:pb-[180px]">
+    <section className="max-w-[1600px] mx-auto pt-[30px] md:pt-[80px] xl:pt-[90px] 2xl:pt-[150px] pb-16 2xl:pb-[180px] relative">
       <div className="w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-6">
         {/* Left Column */}
         <div className="lg:col-span-3 xl:col-span-3 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -143,6 +143,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {/* <div className="w-[800px] h-80 bg-primary/20 absolute -z-1 -right-28 top-40 rounded-[100%] -rotate-45 blur-[100px]"></div> */}
     </section>
   );
 };

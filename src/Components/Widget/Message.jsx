@@ -78,7 +78,7 @@ const Message = () => {
                 </div>
                 <div
                     ref={hiRef}
-                    className="w-[170px] bg-purple-500 dark:bg-primary rounded-full px-3 py-1.5 text-white dark:text-black outfit font-medium absolute -top-12 right-0"
+                    className="w-[180px] bg-purple-500 dark:bg-primary rounded-full px-3 py-1.5 text-white dark:text-black outfit font-medium absolute -top-12 right-0"
                 >
                     How can I help you ?
                 </div>
