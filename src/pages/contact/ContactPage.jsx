@@ -2,7 +2,7 @@ import Contact from '../../Components/Section/Contact/Contact';
 
 const ContactPage = () => {
   return (
-    <section className="xl:pt-20">
+    <section className="xl:pt-24 pb-10">
       <Contact />
     </section>
   );

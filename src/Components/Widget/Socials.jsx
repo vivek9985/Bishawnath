@@ -11,12 +11,19 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 
 const socialIcons = [
-    { icon: <FaGithub />, slug: "https://github.com/vivek9985", className: "left-6 top-3" },
-    { icon: <FaLinkedinIn />, slug: "https://www.linkedin.com/in/bishawnath/", className: "top-10 -left-4" },
-    { icon: <FaDribbble />, slug: "https://dribbble.com/bishawnath-bormon", className: "-left-7 top-0 bottom-0 my-auto" },
-    { icon: <FaBehance />, slug: "https://www.behance.net/bishawnbormon", className: "bottom-10 -left-4" },
-    { icon: <FaFacebookF />, slug: "https://www.facebook.com/vivek.anando.9985", className: "bottom-3 left-6" },
+    { icon: <FaGithub />, slug: "https://github.com/", className: "left-6 top-3" },
+    { icon: <FaLinkedinIn />, slug: "https://www.linkedin.com/", className: "top-10 -left-4" },
+    { icon: <FaDribbble />, slug: "https://dribbble.com/", className: "-left-7 top-0 bottom-0 my-auto" },
+    { icon: <FaBehance />, slug: "https://www.behance.net/", className: "bottom-10 -left-4" },
+    { icon: <FaFacebookF />, slug: "https://www.facebook.com/", className: "bottom-3 left-6" },
 ];
+// const socialIcons = [
+//     { icon: <FaGithub />, slug: "https://github.com/vivek9985", className: "left-6 top-3" },
+//     { icon: <FaLinkedinIn />, slug: "https://www.linkedin.com/in/bishawnath/", className: "top-10 -left-4" },
+//     { icon: <FaDribbble />, slug: "https://dribbble.com/bishawnath-bormon", className: "-left-7 top-0 bottom-0 my-auto" },
+//     { icon: <FaBehance />, slug: "https://www.behance.net/bishawnbormon", className: "bottom-10 -left-4" },
+//     { icon: <FaFacebookF />, slug: "https://www.facebook.com/vivek.anando.9985", className: "bottom-3 left-6" },
+// ];
 
 const Socials = () => {
     const [active, setActive] = useState(false);
