@@ -19,14 +19,14 @@ const AccordionItem = ({
                     </div>
                 </>
             )}
-            className={({ isEnter }) => `rounded-3xl border-[1px] dark:border-[#ffffff2b] bg-[#0000000f]  dark:bg-[#ffffff0e] outfit transition-all duration-500 ${isEnter ? "" : ""}`}
+            className={({ isEnter }) => `rounded-3xl border-[1px] dark:border-[#9797972b] bg-[#0000000f] dark:bg-[#1f1f1fde] outfit transition-all duration-500 ${isEnter ? "" : ""}`}
             buttonProps={{
                 className: ({ isEnter }) => `relative flex w-full py-5 px-6 lg:px-8 text-left cursor-pointer text-black dark:text-white group ${isEnter && ''}`
             }}
             contentProps={{ className: `text-black dark:text-white pr-10 transition-all duration-300 ease-out` }}
             panelProps={{ className: "p-6 pt-0" }}
         >
-            <p className="">
+            <p className="text-stone-400">
                 {children}
             </p>
         </Item>

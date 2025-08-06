@@ -1,11 +1,30 @@
+import { useRef } from "react";
 import Bg from "../../../assets/cta-bg-light.mp4"
 import PrimaryButton from './../../ui/Button/PrimaryButton';
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Cta = () => {
+    const ctaRef = useRef(null);
+    useGSAP(() => {
+        gsap.from("#cta", {
+            scrollTrigger: {
+                trigger: ctaRef.current,
+                start: "top 70%",
+                end: "bottom 50%",
+                scrub: true,
+            },
+            opacity: 0,
+            y: 180,
+            scale: 1.3,
+            duration: 1,
+            ease: "power3.out",
+        });
+    }, []);
     return (
-        <section className="pb-20 md:pb-28 lg:pb-32 xl:pb-40">
-            <div className="w-11/12 sm:w-9/12 md:w-[715px] lg:w-[900px] xl:w-[1200px] h-[330px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] mx-auto rounded-2xl sm:rounded-3xl md:rounded-[50px] bg-stone-300 dark:bg-stone-700 overflow-hidden relative">
+        <section className="pb-20 md:pb-28 lg:pb-32 xl:pb-40" ref={ctaRef}>
+            <div className="w-11/12 sm:w-9/12 md:w-[715px] lg:w-[900px] xl:w-[1200px] h-[330px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] mx-auto rounded-2xl sm:rounded-3xl md:rounded-[50px] bg-stone-300 dark:bg-stone-700 overflow-hidden relative" id="cta">
                 <video
                     className="w-full h-auto aspect-video hidden md:block invert-0 dark:invert"
                     loop

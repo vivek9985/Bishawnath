@@ -4,6 +4,7 @@ import { FaRegUser, FaUser } from "react-icons/fa";
 import { IoGrid, IoGridOutline, IoMail, IoMailOutline } from "react-icons/io5";
 import { RiDownloadCloud2Fill } from "react-icons/ri";
 import { useLocation, useNavigate } from "react-router-dom";
+import hoverSound from '../../assets/tap.mp3';
 import gsap from "gsap";
 
 const navItems = [
@@ -30,6 +31,7 @@ const navItems = [
 
 const Nav = () => {
     const navRef = useRef([]);
+    const audioRef = useRef(null);
     const { pathname } = useLocation();
     const navigate = useNavigate();
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -54,7 +56,7 @@ const Nav = () => {
                 width: size,
                 height: size,
                 y: translateY,
-                duration: 0.5,
+                duration: 0.6,
                 ease: "elastic.out(0.6, 1)",
             });
         });
@@ -72,18 +74,26 @@ const Nav = () => {
             className={`w-fit h-[57px] rounded-2xl flex items-end justify-center fixed left-0 right-0 -bottom-20 mx-auto z-10 px-2.5 pb-[9px] ${hoveredIndex !== null ? "gap-0" : "gap-1"
                 }`}
         >
-            <div className="absolute left-0 top-0 bottom-0 right-0 m-auto backdrop-blur-xl border border-[#ffffff2e] rounded-2xl z-[-1] duration-500">
-                <div className="w-full h-full bg-[#00000018] dark:bg-[#ffffff18] rounded-2xl relative overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 right-0 m-auto backdrop-blur-xl border border-[#ffffff1c] rounded-2xl z-[-1] duration-500">
+                <div className="w-full h-full bg-[#ffffffbe] dark:bg-[#000000] rounded-2xl relative overflow-hidden">
                     <div className="w-20 h-20 bg-accent dark:bg-primary absolute right-0 top-[-50%] rounded-full blur-lg"></div>
-                    <div className="w-20 h-20 bg-accent dark:bg-primary absolute left-[5%] bottom-[-80%] rounded-full blur-lg"></div>
+                    <div className="w-20 h-20 bg-accent dark:bg-primary absolute left-[5%] bottom-[-90%] rounded-full blur-xl"></div>
                 </div>
             </div>
             {navItems?.map((item, index) => (
                 <div
                     key={index}
                     ref={(el) => (itemRefs.current[index] = el)}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
+                    onMouseEnter={() => {
+                        setHoveredIndex(index)
+                        audioRef.current.currentTime = 0;
+                        audioRef.current.play();
+                    }}
+                    onMouseLeave={() => {
+                        setHoveredIndex(null)
+                        audioRef.current.pause();
+                        audioRef.current.currentTime = 0;
+                    }}
                     onClick={() => {
                         if (item?.path) {
                             navigate(item?.path)
@@ -97,11 +107,12 @@ const Nav = () => {
                     {pathname === item?.path && (
                         <div className="w-1 h-1 rounded-full bg-black/50 dark:bg-white absolute left-0 right-0 mx-auto -bottom-[6px]" />
                     )}
-                    <div className="absolute w-fit bg-stone-200/50 dark:bg-black/50 px-2 pt-[3px] pb-1 left-0 right-0 mx-auto top-[-25px] text-center rounded-md scale-0 group-hover:scale-100 duration-200">
+                    <div className="absolute w-fit bg-stone-100 dark:bg-black px-2 pt-[3px] pb-1 left-0 right-0 mx-auto top-[-25px] text-center rounded-full scale-0 group-hover:scale-100 duration-200">
                         <p className="text-xs font-medium leading-[100%] text-stone-500">{item?.name}</p>
                     </div>
                 </div>
             ))}
+            <audio ref={audioRef} src={hoverSound} />
         </div>
     );
 };
