@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import PricingCard from "../../Cards/PricingCard";
 import Tittle from "../../Tittle/Tittle";
 import gsap from "gsap";
@@ -26,6 +28,7 @@ const Pricing = () => {
                 stagger: 0.1,
             }
         );
+        Aos.init({}); //once: true
     }, [active]);
 
     return (
@@ -35,7 +38,12 @@ const Pricing = () => {
             </div>
 
             {/* Tabs */}
-            <div className="bg-[#272626] w-[210px] h-12 mx-auto rounded-full relative flex items-center justify-center mt-10">
+            <div
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="200"
+                className="bg-[#272626] w-[210px] h-12 mx-auto rounded-full relative flex items-center justify-center mt-10"
+            >
                 <div className="flex items-center w-[200px] h-10 rounded-full outfit relative text-stone-400 overflow-hidden">
                     <button
                         className="w-1/2 text-center h-full rounded-full relative z-10"

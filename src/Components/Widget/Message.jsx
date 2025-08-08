@@ -65,32 +65,32 @@ const Message = () => {
         <div
             onClick={handleClick}
             ref={messageRef}
-            className="w-11 h-11 rounded-full flex items-center justify-center dark:bg-primary bg-purple-500 cursor-pointer fixed right-10 bottom-10 z-50"
+            className="w-11 h-11 rounded-full flex items-center justify-center dark:bg-primary bg-black cursor-pointer fixed right-10 bottom-10 z-50"
         >
             <div className="w-full h-full relative flex items-center justify-center">
-                <img className="w-8 block dark:hidden" src={MessageIcon} alt="Message Icon" />
+                <img className="w-8 block invert dark:hidden" src={MessageIcon} alt="Message Icon" />
                 <img className="w-8 hidden dark:block" src={MessageIconDark} alt="Message Icon" />
                 <div
                     ref={helpRef}
-                    className="w-[100px] bg-purple-500 dark:bg-primary rounded-full px-3 py-1.5 text-white dark:text-black outfit font-medium absolute -top-[95px] right-0"
+                    className="w-[100px] bg-black dark:bg-primary rounded-full px-3 py-1.5 text-white dark:text-black outfit font-medium absolute -top-[95px] right-0"
                 >
                     Hi there !
                 </div>
                 <div
                     ref={hiRef}
-                    className="w-[180px] bg-purple-500 dark:bg-primary rounded-full px-3 py-1.5 text-white dark:text-black outfit font-medium absolute -top-12 right-0"
+                    className="w-[180px] bg-black dark:bg-primary rounded-full px-3 py-1.5 text-white dark:text-black outfit font-medium absolute -top-12 right-0"
                 >
                     How can I help you ?
                 </div>
                 <div
                     ref={wRef}
-                    className="scale-0 w-11 h-11 flex items-center justify-center bg-purple-500 dark:bg-primary rounded-full text-white dark:text-black outfit font-medium absolute top-[-55px] right-0"
+                    className="scale-0 w-11 h-11 flex items-center justify-center bg-black dark:bg-primary rounded-full text-white dark:text-black outfit font-medium absolute top-[-55px] right-0"
                 >
                     <FaWhatsapp size={20} />
                 </div>
                 <div
                     ref={mRef}
-                    className="scale-0 w-11 h-11 flex items-center justify-center bg-purple-500 dark:bg-primary rounded-full text-white dark:text-black outfit font-medium absolute top-[-110px] right-0"
+                    className="scale-0 w-11 h-11 flex items-center justify-center bg-black dark:bg-primary rounded-full text-white dark:text-black outfit font-medium absolute top-[-110px] right-0"
                 >
                     <FaFacebookMessenger size={20} />
                 </div>

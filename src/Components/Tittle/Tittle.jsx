@@ -14,7 +14,7 @@ const Tittle = ({ text }) => {
         <h2
           data-aos="fade-up"
           data-aos-duration="800"
-          className="text-center font-medium text-transparent dark:text-primary lobster text-3xl md:text-4xl lg:text-5xl mb-6 capitalize section-title"
+          className="text-center font-medium text-black dark:text-primary lobster text-3xl md:text-4xl lg:text-5xl mb-6 capitalize"
         >
           {text}
         </h2>

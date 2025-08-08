@@ -98,7 +98,7 @@ const Hero = () => {
               <h2 className="text-[22px] xl:text-[28px] leading-[100%] text-gray-950 dark:text-gray-50">
                 I&apos;m a{" "}
               </h2>
-              <div className="text-accent dark:text-primary text-[20px] sm:text-[30px] leading-[100%]">
+              <div className="text-black dark:text-primary text-[20px] sm:text-[30px] leading-[100%]">
                 <TypeAnimation
                   sequence={[
                     "Mern Developer.",

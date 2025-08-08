@@ -67,7 +67,7 @@ const PricingCard = ({ type = "basic", price = 25, variant = "", className = "" 
                             frontEndBasicData?.map((list, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <div
-                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-accent dark:bg-primary" : "bg-stone-500"
+                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-black dark:bg-primary" : "bg-stone-500"
                                             }`}
                                     >
                                         {list?.status ? <FaCheck size={12} /> : <IoClose size={14} />}
@@ -81,7 +81,7 @@ const PricingCard = ({ type = "basic", price = 25, variant = "", className = "" 
                             frontEndMediumData?.map((list, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <div
-                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-accent dark:bg-primary" : "bg-stone-500"
+                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-black dark:bg-primary" : "bg-stone-500"
                                             }`}
                                     >
                                         {list?.status ? <FaCheck size={12} /> : <IoClose size={14} />}
@@ -95,7 +95,7 @@ const PricingCard = ({ type = "basic", price = 25, variant = "", className = "" 
                             frontEndPremiumData?.map((list, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <div
-                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-accent dark:bg-primary" : "bg-stone-500"
+                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-black dark:bg-primary" : "bg-stone-500"
                                             }`}
                                     >
                                         {list?.status ? <FaCheck size={12} /> : <IoClose size={14} />}
@@ -109,7 +109,7 @@ const PricingCard = ({ type = "basic", price = 25, variant = "", className = "" 
                             mernBasicData?.map((list, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <div
-                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-accent dark:bg-primary" : "bg-stone-500"
+                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-black dark:bg-primary" : "bg-stone-500"
                                             }`}
                                     >
                                         {list?.status ? <FaCheck size={12} /> : <IoClose size={14} />}
@@ -123,7 +123,7 @@ const PricingCard = ({ type = "basic", price = 25, variant = "", className = "" 
                             mernMediumData?.map((list, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <div
-                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-accent dark:bg-primary" : "bg-stone-500"
+                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-black dark:bg-primary" : "bg-stone-500"
                                             }`}
                                     >
                                         {list?.status ? <FaCheck size={12} /> : <IoClose size={14} />}
@@ -137,7 +137,7 @@ const PricingCard = ({ type = "basic", price = 25, variant = "", className = "" 
                             mernPremiumData?.map((list, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <div
-                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-accent dark:bg-primary" : "bg-stone-500"
+                                        className={`w-[18px] h-[18px] rounded-full flex items-center justify-center text-stone-300 dark:text-black ${list?.status ? "bg-black dark:bg-primary" : "bg-stone-500"
                                             }`}
                                     >
                                         {list?.status ? <FaCheck size={12} /> : <IoClose size={14} />}
@@ -153,7 +153,7 @@ const PricingCard = ({ type = "basic", price = 25, variant = "", className = "" 
                     </Link>
                 </div>
             </div>
-            <div className="absolute z-0 left-0 top-0 w-full h-full bg-gradient-to-b from-[#d9d7d7] to-light dark:from-[#272626] dark:to-secondary rounded-3xl">
+            <div className="absolute z-0 left-0 top-0 w-full h-full bg-gradient-to-b from-[#e8e6e6] to-light dark:from-[#272626] dark:to-secondary rounded-3xl">
             </div>
         </div>
     );

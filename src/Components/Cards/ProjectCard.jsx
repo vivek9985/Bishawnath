@@ -5,7 +5,7 @@ import w from "../../assets/works/w.png"
 
 const ProjectCard = ({ name, liveLink, imgOne, imgTwo, imgThree, technologies, className = "" }) => {
     return (
-        <div className={`w-[400px] rounded-3xl py-8 bg-[#f4f2f2] dark:bg-[#000000] border-[5px] border-black/10 scale-95 sm:scale-100 ${className}`}>
+        <div className={`w-[400px] rounded-3xl py-8 bg-white dark:bg-[#000000] border-[5px] border-[#f8f8f8] dark:border-[#1d1d1d] scale-95 sm:scale-100 ${className}`}>
             <div className="w-[338px] h-[270px] rounded-[18px] mx-auto relative group perspective-wrapper scale-[0.8] sm:scale-100">
                 <img className="w-full h-full rounded-xl object-contain d" style={{ filter: "drop-shadow(-1px -2px 0px #ffffff)" }} src={folder} alt="" />
                 <div>

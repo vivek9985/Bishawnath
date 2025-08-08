@@ -1,7 +1,7 @@
 const Ticker = () => {
   const star = (
     <svg
-      className="grayscale-0 dark:grayscale invert dark:invert-0"
+      className="grayscale invert-0 dark:invert"
       width="30"
       height="30"
       viewBox="0 0 37 35"
@@ -16,7 +16,7 @@ const Ticker = () => {
   );
   return (
     <section className="my-32 overflow-x-hidden">
-      <div className="w-[110%] mx-auto -translate-x-2 bg-accent dark:bg-primary">
+      <div className="w-[110%] mx-auto -translate-x-2 bg-black dark:bg-primary">
         <div className="py-5 flex items-center gap-12 whitespace-nowrap ticker-1">
           <div className="flex items-center gap-12">
             <h2 className="text-white dark:text-gray-900 text-4xl font-bold uppercase">

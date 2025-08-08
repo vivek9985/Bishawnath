@@ -12,11 +12,11 @@ const Profile = () => {
                 />
             </div>
             <div className="absolute w-14 h-14 top-0 bottom-0 left-0 right-0 m-auto">
-                <div className="relative bg-accent dark:bg-primary rounded-full overflow-hidden">
+                <div className="relative bg-black dark:bg-primary rounded-full overflow-hidden">
                     <img
                         src={profile}
                         alt="Vivek"
-                        className="w-full h-full rounded-full select-none"
+                        className="w-full h-full rounded-full select-none grayscale dark:grayscale-0"
                     />
                 </div>
             </div>
