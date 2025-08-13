@@ -78,7 +78,7 @@ const Contact = () => {
           data-aos-duration="1400"
         >
           <Player
-            className="w-[300px] h-[300px] md:w-[400px] md:h-[400px]"
+            className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] grayscale dark:grayscale-0 filter dark:hue-rotate-[-70deg]"
             autoplay
             loop
             src="https://lottie.host/53ddedbd-c62b-441d-95c2-09f0d6d435a1/eLRmeSaTl2.json"

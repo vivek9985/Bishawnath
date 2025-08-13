@@ -69,7 +69,7 @@ const Hero = () => {
           {/* Greeting */}
           <div className="w-fit leading-[90%] mt-4 pl-1 text-2xl text-gray-500 dark:text-stone-300 outfit relative overflow-hidden">
             Hi, my name is
-            <div className="w-full h-full absolute top-0 left-0 bg-[#fffaf1] dark:bg-[#161616]" ref={subTitleRef}
+            <div className="w-full h-full absolute top-0 left-0 bg-light dark:bg-secondary" ref={subTitleRef}
             ></div>
           </div>
           {/* Name */}
@@ -117,7 +117,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="w-full h-full absolute top-0 left-0 bg-[#fffaf1] dark:bg-[#161616]" ref={roleRef}
+            <div className="w-full h-full absolute top-0 left-0 bg-light dark:bg-secondary" ref={roleRef}
             ></div>
           </div>
           {/* About Text */}
@@ -125,7 +125,7 @@ const Hero = () => {
             <p className="max-w-[650px] pr-4 mt-2 font-light outfit text-gray-700 dark:text-stone-400">
               I&apos;m a front end web developer who is passionate about making error-free websites with client satisfaction. I am strategic, goal-oriented, and always work with an end goal in mind. My focus is on clean design, micro animations, and interaction.
             </p>
-            <div className="w-full h-full absolute top-0 left-0 bg-[#fffaf1] dark:bg-[#161616]" ref={boxRef}
+            <div className="w-full h-full absolute top-0 left-0 bg-light dark:bg-secondary" ref={boxRef}
             ></div>
           </div>
           {/* Hire Me Button */}

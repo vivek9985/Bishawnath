@@ -11,7 +11,7 @@ const About = () => {
         <div>
           <Tittle text={"about me"}></Tittle>
         </div>
-        <div className="w-[200px] mx-auto bg-purple-400 rounded-full overflow-hidden mt-8 md:mt-12 outline-4 outline-offset-2 outline-dotted outline-purple-400">
+        <div className="w-[200px] mx-auto bg-secondary dark:bg-primary rounded-full overflow-hidden mt-8 md:mt-12 outline-4 outline-offset-2 outline-dotted outline-secondary dark:outline-primary">
           <img className="w-full h-full" src={vivek} alt="viek" />
         </div>
         <h2 className="text-center text-3xl dhurjati text-gray-800 dark:text-stone-300 mt-8">
