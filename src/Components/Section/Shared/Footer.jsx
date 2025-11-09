@@ -29,7 +29,7 @@ const Footer = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="w-full bg-white/60 dark:bg-[#1d1d1d] pb-10">
+    <section className="w-full bg-primary dark:bg-[#1d1d1d] pb-10">
       <div className="max-w-[1600px] mx-auto">
         <div className="w-10/12 mx-auto grid md:grid-cols-2 gap-5 pt-10 md:pt-20 pb-10 md:pb-16">
           <div>
