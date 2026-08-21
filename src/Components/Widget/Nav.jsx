@@ -2,7 +2,7 @@ import { useState, useRef, useLayoutEffect } from "react";
 import { GoHome, GoHomeFill } from "react-icons/go";
 import { FaRegUser, FaUser } from "react-icons/fa";
 import { IoGrid, IoGridOutline, IoMail, IoMailOutline } from "react-icons/io5";
-import { RiDownloadCloud2Fill } from "react-icons/ri";
+import { RiCodeBoxFill, RiCodeBoxLine, RiDownloadCloud2Fill } from "react-icons/ri";
 import { useLocation, useNavigate } from "react-router-dom";
 import hoverSound from '../../assets/tap.mp3';
 import gsap from "gsap";
@@ -23,6 +23,10 @@ const navItems = [
     {
         path: "/contact", name: "Contact", activeIcon: <IoMailOutline className="text-[28px]" />,
         icon: <IoMail className="text-[28px]" />
+    },
+    {
+        path: "/package", name: "Package", activeIcon: <RiCodeBoxLine className="text-[28px]" />,
+        icon: <RiCodeBoxFill className="text-[28px]" />
     },
     {
         path: "", name: "Resume", icon: <RiDownloadCloud2Fill className="text-[28px]" />
