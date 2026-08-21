@@ -1,8 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Tittle from "./../../Components/Tittle/Tittle";
+import CopyButton from "./CopyButton";
 
 const Package = () => {
-  const [copy, setCopy] = useState("copy");
+  // const [copy, setCopy] = useState("copy");
+  // console.log(copy)
+
   const commands = [
     {
       "packageName": "Express",
@@ -18,10 +21,10 @@ const Package = () => {
       "command": "npm install react-router-dom",
     },
   ];
-  const copyHandler = (command) => {
-    setCopy("copied");
-    command.copy;
-  };
+  // const copyHandler = (command) => {
+  //   setCopy("copied");
+  //   command.copy;
+  // };
   return (
     <div className="min-h-[70vh] max-w-[1600px] mx-auto mt-24">
       <Tittle text="Commands" />
@@ -39,12 +42,10 @@ const Package = () => {
                 <span className="select-none mr-2">$</span>
                 {item?.command}
               </span>
-              <button
-                onClick={() => copyHandler(item?.command)}
-                className="text-gray-400 select-none"
-              >
-                Copy
-              </button>
+              <CopyButton
+                ButtonText="Copy"
+                CopyText = {item?.command}
+              />
             </code>
           </div>
         ))}
