@@ -47,7 +47,7 @@ const Socials = () => {
                 opacity: 0,
                 duration: 0.3,
                 ease: "power2.inOut",
-                stagger: 0.03,
+                stagger: 0.035,
             });
 
             gsap.to(circleRef.current, {
