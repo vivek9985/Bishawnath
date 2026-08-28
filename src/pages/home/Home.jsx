@@ -1,6 +1,6 @@
 import Hero from "../../Components/Section/Home/Hero";
 import Skills from './../../Components/Section/Shared/Skills';
-// import Experience from './../../Components/Section/Home/Experience';
+import Experience from './../../Components/Section/Home/Experience';
 // import Works from './../../Components/Section/Home/Works';
 import Services from './../../Components/Section/Home/Services';
 import RecentWorks from "../../Components/Section/Home/RecentWorks";
@@ -15,7 +15,7 @@ const Home = () => {
     <main>
       <Hero />
       <Skills />
-      {/* <Experience /> */}
+      <Experience />
       {/* <Works /> */}
       <Services />
       <Ticker />
