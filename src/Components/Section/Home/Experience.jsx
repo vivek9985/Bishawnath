@@ -16,7 +16,7 @@ const Experience = () => {
         <div
         data-aos="fade-up"
         data-aos-duration="1100"
-        className="group group-hover:after:duration-500 after:duration-500 duration-500 hover:duration-500 hover:after:right-60 origin-left hover:decoration-2 relative bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-lime-300 after:-right-4 after:top-14 after:rounded-full after:blur-lg">
+        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden">
           <h2 className="text-xl md:text-2xl text-gray-900 dark:text-gray-300">
             Education
           </h2>
@@ -37,7 +37,7 @@ const Experience = () => {
         <div
         data-aos="fade-up"
         data-aos-duration="1600"
-        className="group group-hover:after:duration-500 after:duration-500 duration-500 hover:duration-500 hover:after:right-60 origin-left hover:decoration-2 relative bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-rose-300 after:-right-4 after:top-14 after:rounded-full after:blur-lg">
+        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden">
           <h2 className="text-xl md:text-2xl text-gray-900 dark:text-gray-300">
             Experience
           </h2>
@@ -46,13 +46,13 @@ const Experience = () => {
             <span>+</span>
           </div>
           <p className="text-gray-900 dark:text-gray-300">Years</p>
-        </div>
+        </div>  
 
         {/* three */}
         <div
         data-aos="fade-up"
         data-aos-duration="2100"
-        className="group group-hover:after:duration-500 after:duration-500 duration-500 hover:duration-500 hover:after:right-60 origin-left hover:decoration-2 relative bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-blue-300 after:-right-4 after:top-14 after:rounded-full after:blur-lg">
+        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden">
           <h2 className="text-xl md:text-2xl text-gray-900 dark:text-gray-300">
             Projects
           </h2>
