@@ -100,7 +100,12 @@ const Nav = () => {
                     }}
                     onClick={() => {
                         if (item?.path) {
-                            navigate(item?.path)
+                            navigate(item.path);
+                        } else {
+                            window.open(
+                                "https://drive.google.com/file/d/1DvKN0c0faQX36lL73X8ZLNlx94fpiNkS/view",
+                                "_blank"
+                            );
                         }
                     }}
                     className="bg-white/50 dark:bg-black/80 backdrop-blur-sm w-[40px] h-[40px] flex items-center justify-center rounded-xl hover:rounded-2xl cursor-pointer group relative"
