@@ -16,11 +16,11 @@ const Experience = () => {
         <div
         data-aos="fade-up"
         data-aos-duration="1100"
-        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden">
+        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-xl overflow-hidden">
           <h2 className="text-xl md:text-2xl text-gray-900 dark:text-gray-300">
             Education
           </h2>
-          <div className="mt-2 font-medium text-gray-400">
+          <div className="mt-10 font-medium text-gray-400">
             <h2 className="text-purple-500 text-[26px] leading-8 mt-2 mb-3 font-bold">
               Diploma in Electronics Engineering
             </h2>
@@ -37,12 +37,12 @@ const Experience = () => {
         <div
         data-aos="fade-up"
         data-aos-duration="1600"
-        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden">
+        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-xl overflow-hidden">
           <h2 className="text-xl md:text-2xl text-gray-900 dark:text-gray-300">
             Experience
           </h2>
-          <div className="text-5xl mt-3 mb-2 font-bold text-rose-500">
-            <CountUp start={-20} end={2} duration={2}></CountUp>
+          <div className="text-5xl mt-10 mb-2 font-bold text-rose-500">
+            <CountUp start={-20} end={4} duration={4}></CountUp>
             <span>+</span>
           </div>
           <p className="text-gray-900 dark:text-gray-300">Years</p>
@@ -52,11 +52,11 @@ const Experience = () => {
         <div
         data-aos="fade-up"
         data-aos-duration="2100"
-        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-3xl overflow-hidden">
+        className="bg-stone-100 dark:bg-stone-900 border dark:border-stone-800 text-left p-5 2xl:p-8 pl-8 text-gray-50 dark:text-gray-900 text-base font-bold rounded-xl overflow-hidden">
           <h2 className="text-xl md:text-2xl text-gray-900 dark:text-gray-300">
             Projects
           </h2>
-          <div className="text-5xl mt-3 mb-3 font-bold text-blue-500">
+          <div className="text-5xl mt-10 mb-3 font-bold text-blue-500">
             <CountUp start={-20} end={25} duration={2}></CountUp>
             <span>+</span>
           </div>
